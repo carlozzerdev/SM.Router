@@ -1,0 +1,9 @@
+<Project Sdk="Microsoft.VisualStudio.JavaScript.Sdk/1.0.7173973">
+  <PropertyGroup>
+    <StartupCommand>npm run dev</StartupCommand>
+    <!-- dotnet build de la solución no depende de Node: el build de Vite se lanza con npm run build. -->
+    <ShouldRunBuildScript>false</ShouldRunBuildScript>
+    <ShouldRunNpmInstall>false</ShouldRunNpmInstall>
+    <BuildOutputFolder>$(MSBuildProjectDirectory)\dist</BuildOutputFolder>
+  </PropertyGroup>
+</Project>

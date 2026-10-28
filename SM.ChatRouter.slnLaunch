@@ -1,0 +1,16 @@
+[
+  {
+    "Name": "Api + Web",
+    "Projects": [
+      {
+        "Path": "src\\SM.ChatRouter.Api\\SM.ChatRouter.Api.csproj",
+        "Action": "Start",
+        "DebugTarget": "http"
+      },
+      {
+        "Path": "src\\SM.ChatRouter.Web\\SM.ChatRouter.Web.esproj",
+        "Action": "StartWithoutDebugging"
+      }
+    ]
+  }
+]

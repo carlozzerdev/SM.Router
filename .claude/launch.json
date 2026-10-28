@@ -1,0 +1,21 @@
+{
+  "version": "0.0.1",
+  "configurations": [
+    {
+      "name": "api",
+      "runtimeExecutable": "dotnet",
+      "runtimeArgs": ["run", "--project", "src/SM.ChatRouter.Api", "--no-launch-profile", "--urls", "http://localhost:5122"],
+      "env": { "ASPNETCORE_ENVIRONMENT": "Development" },
+      "port": 5122,
+      "autoPort": false
+    },
+    {
+      "name": "web",
+      "runtimeExecutable": "npm",
+      "runtimeArgs": ["run", "dev", "--prefix", "src/SM.ChatRouter.Web", "--", "--port", "5174"],
+      "env": { "API_URL": "http://localhost:5122" },
+      "port": 5174,
+      "autoPort": false
+    }
+  ]
+}

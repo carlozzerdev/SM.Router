@@ -4,6 +4,9 @@
     <Project Path="src/SM.ChatRouter.Application/SM.ChatRouter.Application.csproj" />
     <Project Path="src/SM.ChatRouter.Domain/SM.ChatRouter.Domain.csproj" />
     <Project Path="src/SM.ChatRouter.Infrastructure/SM.ChatRouter.Infrastructure.csproj" />
+    <Project Path="src/SM.ChatRouter.Web/SM.ChatRouter.Web.esproj">
+      <Build Project="false" />
+    </Project>
   </Folder>
   <Folder Name="/tests/">
     <Project Path="tests/SM.ChatRouter.Tests/SM.ChatRouter.Tests.csproj" />
