@@ -97,3 +97,22 @@ dotnet test --solution SM.ChatRouter.slnx
 ```bash
 dotnet run --project src/SM.ChatRouter.Api
 ```
+
+## Batería de evaluación con IA real
+
+`tests/SM.ChatRouter.Tests/Evaluation/RoutingEvaluationTests.cs` ejecuta los 500 casos de `TestData/Evaluation/sm_500_casos_prueba.csv` contra el modelo real. Como llama a la API de OpenAI (coste y ~30 min), por defecto se omiten: un `dotnet test` normal solo ejecuta los tests unitarios y los de consistencia del CSV con el catálogo.
+
+1. La clave de OpenAI es un secreto: se guarda con user-secrets, nunca en `appsettings.json`.
+
+   ```bash
+   dotnet user-secrets --project src/SM.ChatRouter.Api set "OpenAI:ApiKey" "sk-proj-xxxxxx"
+   ```
+
+2. Activa la evaluación con la variable de entorno `SMROUTER_RUN_EVALUATION` y lanza los tests (PowerShell):
+
+   ```powershell
+   $env:SMROUTER_RUN_EVALUATION = "true"
+   dotnet test --solution SM.ChatRouter.slnx
+   ```
+
+Sin la variable, o sin clave configurada, los casos aparecen como omitidos.
