@@ -1,0 +1,21 @@
+<Project Sdk="Microsoft.NET.Sdk.Web">
+
+  <PropertyGroup>
+    <UserSecretsId>sm-chatrouter-api-3f1c2b7e</UserSecretsId>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\SM.ChatRouter.Application\SM.ChatRouter.Application.csproj" />
+    <ProjectReference Include="..\SM.ChatRouter.Infrastructure\SM.ChatRouter.Infrastructure.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Microsoft.AspNetCore.OpenApi" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Update="Data\categories_tree.json" CopyToOutputDirectory="PreserveNewest" />
+    <None Update="Prompts\*.md" CopyToOutputDirectory="PreserveNewest" />
+  </ItemGroup>
+
+</Project>

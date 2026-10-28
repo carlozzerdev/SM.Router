@@ -1,0 +1,91 @@
+{
+  "categories": [
+    {
+      "id": "incidencia_tecnica",
+      "name": "Incidencia técnica",
+      "description": "Problemas con equipos, aplicaciones o accesos que requieren soporte técnico.",
+      "examples": [
+        "No me funciona el portátil",
+        "Outlook se cierra al abrirlo",
+        "No puedo acceder a la VPN"
+      ],
+      "parameters": [
+        {
+          "name": "producto",
+          "description": "El equipo o aplicación afectada",
+          "type": "String",
+          "isRequired": true,
+          "question": "¿Qué equipo o aplicación te está dando problemas?"
+        },
+        {
+          "name": "prioridad",
+          "description": "La prioridad de la incidencia",
+          "type": "Enum",
+          "isRequired": false,
+          "allowedValues": [ "baja", "media", "alta" ]
+        }
+      ]
+    },
+    {
+      "id": "solicitud_vacaciones",
+      "name": "Solicitud de vacaciones",
+      "description": "Peticiones de días de vacaciones o ausencias planificadas.",
+      "examples": [
+        "Quiero pedir vacaciones en agosto",
+        "Necesito cogerme unos días libres"
+      ],
+      "parameters": [
+        {
+          "name": "fechaInicio",
+          "description": "La fecha de inicio de las vacaciones",
+          "type": "Date",
+          "isRequired": true,
+          "question": "¿Desde qué fecha quieres las vacaciones?"
+        },
+        {
+          "name": "fechaFin",
+          "description": "La fecha de fin de las vacaciones",
+          "type": "Date",
+          "isRequired": true,
+          "question": "¿Hasta qué fecha?"
+        },
+        {
+          "name": "comentario",
+          "description": "Comentario adicional para el responsable",
+          "type": "String",
+          "isRequired": false
+        }
+      ]
+    },
+    {
+      "id": "consulta_factura",
+      "name": "Consulta de factura",
+      "description": "Dudas sobre facturas emitidas o recibidas, importes o estados de pago.",
+      "examples": [
+        "¿Está pagada la factura 2026-0012?",
+        "Tengo una duda con el importe de una factura"
+      ],
+      "parameters": [
+        {
+          "name": "numeroFactura",
+          "description": "El número de factura",
+          "type": "String",
+          "isRequired": true,
+          "question": "¿Cuál es el número de la factura?"
+        },
+        {
+          "name": "importe",
+          "description": "El importe de la factura",
+          "type": "Number",
+          "isRequired": false
+        }
+      ]
+    },
+    {
+      "id": "general",
+      "name": "Consulta general",
+      "description": "Cualquier consulta que no encaje en otra categoría.",
+      "isFallback": true
+    }
+  ]
+}

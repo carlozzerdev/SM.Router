@@ -1,0 +1,2665 @@
+[
+  {
+    "nivel": 1,
+    "rama": "Origen",
+    "idioma": "Espanol",
+    "nombre": "Soporte para librerías o centros escolares",
+    "slug": "librero-copia",
+    "hijos": [
+      {
+        "nivel": 2,
+        "nombre": "Atención Comercial",
+        "slug": "comercial",
+        "hijos": [
+          {
+            "nivel": 3,
+            "nombre": "Solicitar la visitar de un asesor comercial",
+            "campos": [
+              {
+                "nombre": "Nombre comercial o razón social",
+                "obligatorio": true
+              },
+              {
+                "nombre": "Código postal del local",
+                "obligatorio": false
+              },
+              {
+                "nombre": "Nombre",
+                "obligatorio": true
+              },
+              {
+                "nombre": "Apellidos",
+                "obligatorio": true
+              },
+              {
+                "nombre": "Email",
+                "obligatorio": true
+              },
+              {
+                "nombre": "Teléfono",
+                "obligatorio": false
+              },
+              {
+                "nombre": "Descripción de la solicitud",
+                "obligatorio": true
+              }
+            ],
+            "comunidades": [
+              "B2B",
+              "Grupo SM"
+            ],
+            "todas_las_comunidades": false,
+            "fila_excel": 2,
+            "valores_originales": {
+              "detalle": "Solicitar la visitar de un asesor comercial",
+              "campos_formulario": "Nombre comercial o razón social*, Código postal del local, Nombre*, Apellidos*, Email*, Teléfono, Descripción de la solicitud*",
+              "comunidades": "B2B, Grupo SM"
+            }
+          }
+        ]
+      },
+      {
+        "nivel": 2,
+        "nombre": "Mi Cuenta",
+        "slug": "mi-cuenta",
+        "hijos": [
+          {
+            "nivel": 3,
+            "nombre": "Modificar mis datos",
+            "campos": [
+              {
+                "nombre": "Nombre comercial o razón social",
+                "obligatorio": true
+              },
+              {
+                "nombre": "Código postal del local",
+                "obligatorio": false
+              },
+              {
+                "nombre": "Nombre",
+                "obligatorio": true
+              },
+              {
+                "nombre": "Apellidos",
+                "obligatorio": true
+              },
+              {
+                "nombre": "Email",
+                "obligatorio": true
+              },
+              {
+                "nombre": "Teléfono",
+                "obligatorio": false
+              },
+              {
+                "nombre": "Descripción de la solicitud",
+                "obligatorio": true
+              }
+            ],
+            "comunidades": [
+              "Profesores"
+            ],
+            "todas_las_comunidades": false,
+            "fila_excel": 3,
+            "valores_originales": {
+              "detalle": "Modificar mis datos",
+              "campos_formulario": "Nombre comercial o razón social*, Código postal del local, Nombre*, Apellidos*, Email*, Teléfono, Descripción de la solicitud*",
+              "comunidades": "Profesores"
+            }
+          }
+        ]
+      },
+      {
+        "nivel": 2,
+        "nombre": "Mis pedidos",
+        "slug": "mis-pedidos",
+        "hijos": [
+          {
+            "nivel": 3,
+            "nombre": "Incidencia en la entrega de un pedido",
+            "campos": [
+              {
+                "nombre": "Nombre comercial o razón social",
+                "obligatorio": true
+              },
+              {
+                "nombre": "Código postal del local",
+                "obligatorio": false
+              },
+              {
+                "nombre": "Nombre",
+                "obligatorio": true
+              },
+              {
+                "nombre": "Apellidos",
+                "obligatorio": true
+              },
+              {
+                "nombre": "Email",
+                "obligatorio": true
+              },
+              {
+                "nombre": "Teléfono",
+                "obligatorio": false
+              },
+              {
+                "nombre": "Descripción de la solicitud",
+                "obligatorio": true
+              },
+              {
+                "nombre": "Número de pedido",
+                "obligatorio": false
+              },
+              {
+                "nombre": "albarán o factura",
+                "obligatorio": false
+              },
+              {
+                "nombre": "Fecha del pedido",
+                "obligatorio": false
+              },
+              {
+                "nombre": "¿Cómo realizaste tu pedido? (Web / Asesor / Otros)",
+                "obligatorio": false
+              }
+            ],
+            "comunidades": [
+              "B2B",
+              "Grupo SM"
+            ],
+            "todas_las_comunidades": false,
+            "fila_excel": 4,
+            "valores_originales": {
+              "detalle": "Incidencia en la entrega de un pedido",
+              "campos_formulario": "Nombre comercial o razón social*, Código postal del local, Nombre*, Apellidos*, Email*, Teléfono, Descripción de la solicitud*, Número de pedido, albarán o factura, Fecha del pedido, ¿Cómo realizaste tu pedido? (Web / Asesor / Otros)",
+              "comunidades": "B2B, Grupo SM"
+            }
+          },
+          {
+            "nivel": 3,
+            "nombre": "Incidencia en un pedido o en una devolución",
+            "campos": [
+              {
+                "nombre": "Nombre comercial o razón social",
+                "obligatorio": true
+              },
+              {
+                "nombre": "Código postal del local",
+                "obligatorio": false
+              },
+              {
+                "nombre": "Nombre",
+                "obligatorio": true
+              },
+              {
+                "nombre": "Apellidos",
+                "obligatorio": true
+              },
+              {
+                "nombre": "Email",
+                "obligatorio": true
+              },
+              {
+                "nombre": "Teléfono",
+                "obligatorio": false
+              },
+              {
+                "nombre": "Descripción de la solicitud",
+                "obligatorio": true
+              },
+              {
+                "nombre": "Número de pedido",
+                "obligatorio": false
+              },
+              {
+                "nombre": "albarán o factura",
+                "obligatorio": false
+              },
+              {
+                "nombre": "Fecha del pedido",
+                "obligatorio": false
+              },
+              {
+                "nombre": "¿Cómo realizaste tu pedido? (Web / Asesor / Otros)",
+                "obligatorio": false
+              }
+            ],
+            "comunidades": [
+              "B2B",
+              "Grupo SM"
+            ],
+            "todas_las_comunidades": false,
+            "fila_excel": 5,
+            "valores_originales": {
+              "detalle": "Incidencia en un pedido o en una devolución",
+              "campos_formulario": "Nombre comercial o razón social*, Código postal del local, Nombre*, Apellidos*, Email*, Teléfono, Descripción de la solicitud*, Número de pedido, albarán o factura, Fecha del pedido, ¿Cómo realizaste tu pedido? (Web / Asesor / Otros)",
+              "comunidades": "B2B, Grupo SM"
+            }
+          },
+          {
+            "nivel": 3,
+            "nombre": "He recibido material defectuoso",
+            "campos": [
+              {
+                "nombre": "Nombre comercial o razón social",
+                "obligatorio": true
+              },
+              {
+                "nombre": "Código postal del local",
+                "obligatorio": false
+              },
+              {
+                "nombre": "Nombre",
+                "obligatorio": true
+              },
+              {
+                "nombre": "Apellidos",
+                "obligatorio": true
+              },
+              {
+                "nombre": "Email",
+                "obligatorio": true
+              },
+              {
+                "nombre": "Teléfono",
+                "obligatorio": false
+              },
+              {
+                "nombre": "Descripción de la solicitud",
+                "obligatorio": true
+              },
+              {
+                "nombre": "Número de pedido",
+                "obligatorio": false
+              },
+              {
+                "nombre": "albarán o factura",
+                "obligatorio": false
+              },
+              {
+                "nombre": "Fecha del pedido",
+                "obligatorio": false
+              },
+              {
+                "nombre": "¿Cómo realizaste tu pedido? (Web / Asesor / Otros)",
+                "obligatorio": false
+              }
+            ],
+            "comunidades": [
+              "B2B",
+              "Grupo SM"
+            ],
+            "todas_las_comunidades": false,
+            "fila_excel": 6,
+            "valores_originales": {
+              "detalle": "He recibido material defectuoso",
+              "campos_formulario": "Nombre comercial o razón social*, Código postal del local, Nombre*, Apellidos*, Email*, Teléfono, Descripción de la solicitud*, Número de pedido, albarán o factura, Fecha del pedido, ¿Cómo realizaste tu pedido? (Web / Asesor / Otros)",
+              "comunidades": "B2B, Grupo SM"
+            }
+          },
+          {
+            "nivel": 3,
+            "nombre": "He recibido un abono a mi favor",
+            "campos": [
+              {
+                "nombre": "Nombre comercial o razón social",
+                "obligatorio": true
+              },
+              {
+                "nombre": "Código postal del local",
+                "obligatorio": false
+              },
+              {
+                "nombre": "Nombre",
+                "obligatorio": true
+              },
+              {
+                "nombre": "Apellidos",
+                "obligatorio": true
+              },
+              {
+                "nombre": "Email",
+                "obligatorio": true
+              },
+              {
+                "nombre": "Teléfono",
+                "obligatorio": false
+              },
+              {
+                "nombre": "Descripción de la solicitud",
+                "obligatorio": true
+              },
+              {
+                "nombre": "Número de pedido",
+                "obligatorio": false
+              },
+              {
+                "nombre": "albarán o factura",
+                "obligatorio": false
+              },
+              {
+                "nombre": "Fecha del pedido",
+                "obligatorio": false
+              },
+              {
+                "nombre": "¿Cómo realizaste tu pedido? (Web / Asesor / Otros)",
+                "obligatorio": false
+              }
+            ],
+            "comunidades": [
+              "B2B",
+              "Grupo SM"
+            ],
+            "todas_las_comunidades": false,
+            "fila_excel": 7,
+            "valores_originales": {
+              "detalle": "He recibido un abono a mi favor",
+              "campos_formulario": "Nombre comercial o razón social*, Código postal del local, Nombre*, Apellidos*, Email*, Teléfono, Descripción de la solicitud*, Número de pedido, albarán o factura, Fecha del pedido, ¿Cómo realizaste tu pedido? (Web / Asesor / Otros)",
+              "comunidades": "B2B, Grupo SM"
+            }
+          },
+          {
+            "nivel": 3,
+            "nombre": "Consultar el estado de una devolución",
+            "campos": [
+              {
+                "nombre": "Nombre comercial o razón social",
+                "obligatorio": true
+              },
+              {
+                "nombre": "Código postal del local",
+                "obligatorio": false
+              },
+              {
+                "nombre": "Nombre",
+                "obligatorio": true
+              },
+              {
+                "nombre": "Apellidos",
+                "obligatorio": true
+              },
+              {
+                "nombre": "Email",
+                "obligatorio": true
+              },
+              {
+                "nombre": "Teléfono",
+                "obligatorio": false
+              },
+              {
+                "nombre": "Descripción de la solicitud",
+                "obligatorio": true
+              },
+              {
+                "nombre": "Número de pedido",
+                "obligatorio": false
+              },
+              {
+                "nombre": "albarán o factura",
+                "obligatorio": false
+              },
+              {
+                "nombre": "Fecha del pedido",
+                "obligatorio": false
+              },
+              {
+                "nombre": "¿Cómo realizaste tu pedido? (Web / Asesor / Otros)",
+                "obligatorio": false
+              }
+            ],
+            "comunidades": [
+              "B2B",
+              "Grupo SM"
+            ],
+            "todas_las_comunidades": false,
+            "fila_excel": 8,
+            "valores_originales": {
+              "detalle": "Consultar el estado de una devolución",
+              "campos_formulario": "Nombre comercial o razón social*, Código postal del local, Nombre*, Apellidos*, Email*, Teléfono, Descripción de la solicitud*, Número de pedido, albarán o factura, Fecha del pedido, ¿Cómo realizaste tu pedido? (Web / Asesor / Otros)",
+              "comunidades": "B2B, Grupo SM"
+            }
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "nivel": 1,
+    "rama": "Origen",
+    "idioma": "Espanol",
+    "nombre": "Soporte para profesores",
+    "slug": "docentes",
+    "hijos": [
+      {
+        "nivel": 2,
+        "nombre": "Creación de cuenta",
+        "slug": "creacion-cuenta",
+        "hijos": [
+          {
+            "nivel": 3,
+            "nombre": "No encuentro mi centro educativo durante el alta",
+            "campos": [
+              {
+                "nombre": "Nombre",
+                "obligatorio": true
+              },
+              {
+                "nombre": "Apellidos",
+                "obligatorio": true
+              },
+              {
+                "nombre": "Email",
+                "obligatorio": true
+              },
+              {
+                "nombre": "Teléfono",
+                "obligatorio": false
+              },
+              {
+                "nombre": "Descripción de la solicitud",
+                "obligatorio": true
+              },
+              {
+                "nombre": "Nombre del centro eduactivo",
+                "obligatorio": true
+              },
+              {
+                "nombre": "Código Postal",
+                "obligatorio": true
+              }
+            ],
+            "comunidades": [
+              "Grupo SM",
+              "Profesores"
+            ],
+            "todas_las_comunidades": false,
+            "fila_excel": 9,
+            "valores_originales": {
+              "detalle": "No encuentro mi centro educativo durante el alta",
+              "campos_formulario": "Nombre*, Apellidos*, Email*, Teléfono, Descripción de la solicitud*, Nombre del centro eduactivo*, Código Postal*",
+              "comunidades": "Grupo SM, Profesores"
+            }
+          }
+        ]
+      },
+      {
+        "nivel": 2,
+        "nombre": "Mi cuenta",
+        "slug": "mi-cuenta",
+        "hijos": [
+          {
+            "nivel": 3,
+            "nombre": "Cambiar mi usuario",
+            "campos": [
+              {
+                "nombre": "Nombre",
+                "obligatorio": true
+              },
+              {
+                "nombre": "Apellidos",
+                "obligatorio": true
+              },
+              {
+                "nombre": "Email",
+                "obligatorio": true
+              },
+              {
+                "nombre": "Teléfono",
+                "obligatorio": false
+              },
+              {
+                "nombre": "Descripción de la solicitud",
+                "obligatorio": true
+              }
+            ],
+            "comunidades": [
+              "Grupo SM",
+              "Profesores"
+            ],
+            "todas_las_comunidades": false,
+            "fila_excel": 10,
+            "valores_originales": {
+              "detalle": "Cambiar mi usuario",
+              "campos_formulario": "Nombre*, Apellidos*, Email*, Teléfono, Descripción de la solicitud*",
+              "comunidades": "Grupo SM, Profesores"
+            }
+          }
+        ]
+      },
+      {
+        "nivel": 2,
+        "nombre": "Mis pedidos",
+        "slug": "mis-pedidos",
+        "hijos": [
+          {
+            "nivel": 3,
+            "nombre": "Incidencia en la entrega de un pedido",
+            "campos": [
+              {
+                "nombre": "Nombre",
+                "obligatorio": true
+              },
+              {
+                "nombre": "Apellidos",
+                "obligatorio": true
+              },
+              {
+                "nombre": "Email",
+                "obligatorio": true
+              },
+              {
+                "nombre": "Teléfono",
+                "obligatorio": false
+              },
+              {
+                "nombre": "Descripción de la solicitud",
+                "obligatorio": true
+              },
+              {
+                "nombre": "Número de pedido",
+                "obligatorio": false
+              },
+              {
+                "nombre": "albarán o factura",
+                "obligatorio": false
+              },
+              {
+                "nombre": "Fecha del pedido",
+                "obligatorio": false
+              },
+              {
+                "nombre": "¿Cómo realizaste tu pedido? (Web / Asesor / Otros)",
+                "obligatorio": false
+              }
+            ],
+            "comunidades": [
+              "Grupo SM",
+              "Profesores"
+            ],
+            "todas_las_comunidades": false,
+            "fila_excel": 11,
+            "valores_originales": {
+              "detalle": "Incidencia en la entrega de un pedido",
+              "campos_formulario": "Nombre*, Apellidos*, Email*, Teléfono, Descripción de la solicitud*, Número de pedido, albarán o factura, Fecha del pedido, ¿Cómo realizaste tu pedido? (Web / Asesor / Otros)",
+              "comunidades": "Grupo SM, Profesores"
+            }
+          },
+          {
+            "nivel": 3,
+            "nombre": "El importe pagado no corresponde con el importe de la factura",
+            "campos": [
+              {
+                "nombre": "Nombre",
+                "obligatorio": true
+              },
+              {
+                "nombre": "Apellidos",
+                "obligatorio": true
+              },
+              {
+                "nombre": "Email",
+                "obligatorio": true
+              },
+              {
+                "nombre": "Teléfono",
+                "obligatorio": false
+              },
+              {
+                "nombre": "Descripción de la solicitud",
+                "obligatorio": true
+              },
+              {
+                "nombre": "Número de pedido",
+                "obligatorio": false
+              },
+              {
+                "nombre": "albarán o factura",
+                "obligatorio": false
+              },
+              {
+                "nombre": "Fecha del pedido",
+                "obligatorio": false
+              },
+              {
+                "nombre": "¿Cómo realizaste tu pedido? (Web / Asesor / Otros)",
+                "obligatorio": false
+              }
+            ],
+            "comunidades": [
+              "Grupo SM",
+              "Profesores"
+            ],
+            "todas_las_comunidades": false,
+            "fila_excel": 12,
+            "valores_originales": {
+              "detalle": "El importe pagado no corresponde con el importe de la factura",
+              "campos_formulario": "Nombre*, Apellidos*, Email*, Teléfono, Descripción de la solicitud*, Número de pedido, albarán o factura, Fecha del pedido, ¿Cómo realizaste tu pedido? (Web / Asesor / Otros)",
+              "comunidades": "Grupo SM, Profesores"
+            }
+          },
+          {
+            "nivel": 3,
+            "nombre": "Incidencia en la factura",
+            "campos": [
+              {
+                "nombre": "Nombre",
+                "obligatorio": true
+              },
+              {
+                "nombre": "Apellidos",
+                "obligatorio": true
+              },
+              {
+                "nombre": "Email",
+                "obligatorio": true
+              },
+              {
+                "nombre": "Teléfono",
+                "obligatorio": false
+              },
+              {
+                "nombre": "Descripción de la solicitud",
+                "obligatorio": true
+              },
+              {
+                "nombre": "Número de pedido",
+                "obligatorio": false
+              },
+              {
+                "nombre": "albarán o factura",
+                "obligatorio": false
+              },
+              {
+                "nombre": "Fecha del pedido",
+                "obligatorio": false
+              },
+              {
+                "nombre": "¿Cómo realizaste tu pedido? (Web / Asesor / Otros)",
+                "obligatorio": false
+              }
+            ],
+            "comunidades": [
+              "Grupo SM",
+              "Profesores"
+            ],
+            "todas_las_comunidades": false,
+            "fila_excel": 13,
+            "valores_originales": {
+              "detalle": "Incidencia en la factura",
+              "campos_formulario": "Nombre*, Apellidos*, Email*, Teléfono, Descripción de la solicitud*, Número de pedido, albarán o factura, Fecha del pedido, ¿Cómo realizaste tu pedido? (Web / Asesor / Otros)",
+              "comunidades": "Grupo SM, Profesores"
+            }
+          }
+        ]
+      },
+      {
+        "nivel": 2,
+        "nombre": "Problemas haciendo un pedido",
+        "slug": "realizar-pedido",
+        "hijos": [
+          {
+            "nivel": 3,
+            "nombre": "No puedo aplicar un cupón de descuento",
+            "campos": [
+              {
+                "nombre": "Nombre",
+                "obligatorio": true
+              },
+              {
+                "nombre": "Apellidos",
+                "obligatorio": true
+              },
+              {
+                "nombre": "Email",
+                "obligatorio": true
+              },
+              {
+                "nombre": "Teléfono",
+                "obligatorio": false
+              },
+              {
+                "nombre": "Descripción de la solicitud",
+                "obligatorio": true
+              },
+              {
+                "nombre": "Número de pedido",
+                "obligatorio": false
+              },
+              {
+                "nombre": "albarán o factura",
+                "obligatorio": false
+              },
+              {
+                "nombre": "Fecha del pedido",
+                "obligatorio": false
+              },
+              {
+                "nombre": "¿Cómo realizaste tu pedido? (Web / Asesor / Otros)",
+                "obligatorio": false
+              }
+            ],
+            "comunidades": [
+              "Grupo SM",
+              "Profesores"
+            ],
+            "todas_las_comunidades": false,
+            "fila_excel": 14,
+            "valores_originales": {
+              "detalle": "No puedo aplicar un cupón de descuento",
+              "campos_formulario": "Nombre*, Apellidos*, Email*, Teléfono, Descripción de la solicitud*, Número de pedido, albarán o factura, Fecha del pedido, ¿Cómo realizaste tu pedido? (Web / Asesor / Otros)",
+              "comunidades": "Grupo SM, Profesores"
+            }
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "nivel": 1,
+    "rama": "Origen",
+    "idioma": "Espanol",
+    "nombre": "Soporte sobre licencias digitales",
+    "slug": "SMA",
+    "hijos": [
+      {
+        "nivel": 2,
+        "nombre": "Cuenta",
+        "slug": "cuenta",
+        "hijos": [
+          {
+            "nivel": 3,
+            "nombre": "No puedo reiniciar mi contraseña",
+            "campos": [
+              {
+                "nombre": "Nombre",
+                "obligatorio": true
+              },
+              {
+                "nombre": "Apellidos",
+                "obligatorio": true
+              },
+              {
+                "nombre": "Email",
+                "obligatorio": true
+              },
+              {
+                "nombre": "Teléfono",
+                "obligatorio": false
+              },
+              {
+                "nombre": "Descripción de la solicitud",
+                "obligatorio": true
+              }
+            ],
+            "comunidades": [
+              "Botiga Cruïlla",
+              "Grupo SM",
+              "Profesores",
+              "SMA",
+              "Tienda SM"
+            ],
+            "todas_las_comunidades": false,
+            "fila_excel": 15,
+            "valores_originales": {
+              "detalle": "No puedo reiniciar mi contraseña",
+              "campos_formulario": "Nombre*, Apellidos*, Email*, Teléfono, Descripción de la solicitud*",
+              "comunidades": "Botiga Cruïlla, Grupo SM, Profesores, SMA, Tienda SM"
+            }
+          },
+          {
+            "nivel": 3,
+            "nombre": "Cambiar mi usuario",
+            "campos": [
+              {
+                "nombre": "Nombre",
+                "obligatorio": true
+              },
+              {
+                "nombre": "Apellidos",
+                "obligatorio": true
+              },
+              {
+                "nombre": "Email",
+                "obligatorio": true
+              },
+              {
+                "nombre": "Teléfono",
+                "obligatorio": false
+              },
+              {
+                "nombre": "Descripción de la solicitud",
+                "obligatorio": true
+              }
+            ],
+            "comunidades": [
+              "Botiga Cruïlla",
+              "Grupo SM",
+              "Profesores",
+              "SMA",
+              "Tienda SM"
+            ],
+            "todas_las_comunidades": false,
+            "fila_excel": 16,
+            "valores_originales": {
+              "detalle": "Cambiar mi usuario",
+              "campos_formulario": "Nombre*, Apellidos*, Email*, Teléfono, Descripción de la solicitud*",
+              "comunidades": "Botiga Cruïlla, Grupo SM, Profesores, SMA, Tienda SM"
+            }
+          },
+          {
+            "nivel": 3,
+            "nombre": "Soy tutor legal y quiero modificar mis datos",
+            "campos": [
+              {
+                "nombre": "Nombre",
+                "obligatorio": true
+              },
+              {
+                "nombre": "Apellidos",
+                "obligatorio": true
+              },
+              {
+                "nombre": "Email",
+                "obligatorio": true
+              },
+              {
+                "nombre": "Teléfono",
+                "obligatorio": false
+              },
+              {
+                "nombre": "Descripción de la solicitud",
+                "obligatorio": true
+              }
+            ],
+            "comunidades": [
+              "Botiga Cruïlla",
+              "Grupo SM",
+              "Profesores",
+              "SMA",
+              "Tienda SM"
+            ],
+            "todas_las_comunidades": false,
+            "fila_excel": 17,
+            "valores_originales": {
+              "detalle": "Soy tutor legal y quiero modificar mis datos",
+              "campos_formulario": "Nombre*, Apellidos*, Email*, Teléfono, Descripción de la solicitud*",
+              "comunidades": "Botiga Cruïlla, Grupo SM, Profesores, SMA, Tienda SM"
+            }
+          },
+          {
+            "nivel": 3,
+            "nombre": "Tengo varios usuarios y quiero unificarlos",
+            "campos": [
+              {
+                "nombre": "Nombre",
+                "obligatorio": true
+              },
+              {
+                "nombre": "Apellidos",
+                "obligatorio": true
+              },
+              {
+                "nombre": "Email",
+                "obligatorio": true
+              },
+              {
+                "nombre": "Teléfono",
+                "obligatorio": false
+              },
+              {
+                "nombre": "Descripción de la solicitud",
+                "obligatorio": true
+              }
+            ],
+            "comunidades": [
+              "Botiga Cruïlla",
+              "Grupo SM",
+              "Profesores",
+              "SMA",
+              "Tienda SM"
+            ],
+            "todas_las_comunidades": false,
+            "fila_excel": 18,
+            "valores_originales": {
+              "detalle": "Tengo varios usuarios y quiero unificarlos",
+              "campos_formulario": "Nombre*, Apellidos*, Email*, Teléfono, Descripción de la solicitud*",
+              "comunidades": "Botiga Cruïlla, Grupo SM, Profesores, SMA, Tienda SM"
+            }
+          }
+        ]
+      },
+      {
+        "nivel": 2,
+        "nombre": "Activación de Licencias",
+        "slug": "activacion-licencias",
+        "hijos": [
+          {
+            "nivel": 3,
+            "nombre": "No puedo activar una licencia",
+            "campos": [
+              {
+                "nombre": "Nombre",
+                "obligatorio": true
+              },
+              {
+                "nombre": "Apellidos",
+                "obligatorio": true
+              },
+              {
+                "nombre": "Email",
+                "obligatorio": true
+              },
+              {
+                "nombre": "Teléfono",
+                "obligatorio": false
+              },
+              {
+                "nombre": "Descripción de la solicitud",
+                "obligatorio": true
+              },
+              {
+                "nombre": "DNI o NIE",
+                "obligatorio": false
+              },
+              {
+                "nombre": "Licencia",
+                "obligatorio": true
+              },
+              {
+                "nombre": "Entorno por el que accedes (APP / SM Aprendizaje / Educamos / SMA+ / Otras plataformas)",
+                "obligatorio": false
+              }
+            ],
+            "comunidades": [
+              "Botiga Cruïlla",
+              "Grupo SM",
+              "Profesores",
+              "SMA",
+              "Tienda SM"
+            ],
+            "todas_las_comunidades": false,
+            "fila_excel": 19,
+            "valores_originales": {
+              "detalle": "No puedo activar una licencia",
+              "campos_formulario": "Nombre*, Apellidos*, Email*, Teléfono, Descripción de la solicitud*, DNI o NIE, Licencia*, Entorno por el que accedes (APP / SM Aprendizaje / Educamos / SMA+ / Otras plataformas)",
+              "comunidades": "Botiga Cruïlla, Grupo SM, Profesores, SMA, Tienda SM"
+            }
+          },
+          {
+            "nivel": 3,
+            "nombre": "He activado una licencia por error",
+            "campos": [
+              {
+                "nombre": "Nombre",
+                "obligatorio": true
+              },
+              {
+                "nombre": "Apellidos",
+                "obligatorio": true
+              },
+              {
+                "nombre": "Email",
+                "obligatorio": true
+              },
+              {
+                "nombre": "Teléfono",
+                "obligatorio": false
+              },
+              {
+                "nombre": "Descripción de la solicitud",
+                "obligatorio": true
+              },
+              {
+                "nombre": "DNI o NIE",
+                "obligatorio": false
+              },
+              {
+                "nombre": "Licencia",
+                "obligatorio": true
+              },
+              {
+                "nombre": "Entorno por el que accedes (APP / SM Aprendizaje / Educamos / SMA+ / Otras plataformas)",
+                "obligatorio": false
+              }
+            ],
+            "comunidades": [
+              "Botiga Cruïlla",
+              "Grupo SM",
+              "Profesores",
+              "SMA",
+              "Tienda SM"
+            ],
+            "todas_las_comunidades": false,
+            "fila_excel": 20,
+            "valores_originales": {
+              "detalle": "He activado una licencia por error",
+              "campos_formulario": "Nombre*, Apellidos*, Email*, Teléfono, Descripción de la solicitud*, DNI o NIE, Licencia*, Entorno por el que accedes (APP / SM Aprendizaje / Educamos / SMA+ / Otras plataformas)",
+              "comunidades": "Botiga Cruïlla, Grupo SM, Profesores, SMA, Tienda SM"
+            }
+          },
+          {
+            "nivel": 3,
+            "nombre": "Soy alumno y no tengo licencia",
+            "campos": [
+              {
+                "nombre": "Nombre",
+                "obligatorio": true
+              },
+              {
+                "nombre": "Apellidos",
+                "obligatorio": true
+              },
+              {
+                "nombre": "Email",
+                "obligatorio": true
+              },
+              {
+                "nombre": "Teléfono",
+                "obligatorio": false
+              },
+              {
+                "nombre": "Descripción de la solicitud",
+                "obligatorio": true
+              },
+              {
+                "nombre": "DNI o NIE",
+                "obligatorio": false
+              },
+              {
+                "nombre": "Licencia",
+                "obligatorio": true
+              },
+              {
+                "nombre": "Entorno por el que accedes (APP / SM Aprendizaje / Educamos / SMA+ / Otras plataformas)",
+                "obligatorio": false
+              }
+            ],
+            "comunidades": [
+              "Botiga Cruïlla",
+              "Grupo SM",
+              "Profesores",
+              "SMA",
+              "Tienda SM"
+            ],
+            "todas_las_comunidades": false,
+            "fila_excel": 21,
+            "valores_originales": {
+              "detalle": "Soy alumno y no tengo licencia",
+              "campos_formulario": "Nombre*, Apellidos*, Email*, Teléfono, Descripción de la solicitud*, DNI o NIE, Licencia*, Entorno por el que accedes (APP / SM Aprendizaje / Educamos / SMA+ / Otras plataformas)",
+              "comunidades": "Botiga Cruïlla, Grupo SM, Profesores, SMA, Tienda SM"
+            }
+          },
+          {
+            "nivel": 3,
+            "nombre": "Mi libro no incluye una licencia",
+            "campos": [
+              {
+                "nombre": "Nombre",
+                "obligatorio": true
+              },
+              {
+                "nombre": "Apellidos",
+                "obligatorio": true
+              },
+              {
+                "nombre": "Email",
+                "obligatorio": true
+              },
+              {
+                "nombre": "Teléfono",
+                "obligatorio": false
+              },
+              {
+                "nombre": "Descripción de la solicitud",
+                "obligatorio": true
+              },
+              {
+                "nombre": "DNI o NIE",
+                "obligatorio": false
+              },
+              {
+                "nombre": "Licencia",
+                "obligatorio": true
+              },
+              {
+                "nombre": "Entorno por el que accedes (APP / SM Aprendizaje / Educamos / SMA+ / Otras plataformas)",
+                "obligatorio": false
+              }
+            ],
+            "comunidades": [
+              "Botiga Cruïlla",
+              "Grupo SM",
+              "Profesores",
+              "SMA",
+              "Tienda SM"
+            ],
+            "todas_las_comunidades": false,
+            "fila_excel": 22,
+            "valores_originales": {
+              "detalle": "Mi libro no incluye una licencia",
+              "campos_formulario": "Nombre*, Apellidos*, Email*, Teléfono, Descripción de la solicitud*, DNI o NIE, Licencia*, Entorno por el que accedes (APP / SM Aprendizaje / Educamos / SMA+ / Otras plataformas)",
+              "comunidades": "Botiga Cruïlla, Grupo SM, Profesores, SMA, Tienda SM"
+            }
+          },
+          {
+            "nivel": 3,
+            "nombre": "No visualizo el contenido de la licencia",
+            "campos": [
+              {
+                "nombre": "Nombre",
+                "obligatorio": true
+              },
+              {
+                "nombre": "Apellidos",
+                "obligatorio": true
+              },
+              {
+                "nombre": "Email",
+                "obligatorio": true
+              },
+              {
+                "nombre": "Teléfono",
+                "obligatorio": false
+              },
+              {
+                "nombre": "Descripción de la solicitud",
+                "obligatorio": true
+              },
+              {
+                "nombre": "DNI o NIE",
+                "obligatorio": false
+              },
+              {
+                "nombre": "Licencia",
+                "obligatorio": true
+              },
+              {
+                "nombre": "Entorno por el que accedes (APP / SM Aprendizaje / Educamos / SMA+ / Otras plataformas)",
+                "obligatorio": false
+              }
+            ],
+            "comunidades": [
+              "Botiga Cruïlla",
+              "Grupo SM",
+              "Profesores",
+              "SMA",
+              "Tienda SM"
+            ],
+            "todas_las_comunidades": false,
+            "fila_excel": 23,
+            "valores_originales": {
+              "detalle": "No visualizo el contenido de la licencia",
+              "campos_formulario": "Nombre*, Apellidos*, Email*, Teléfono, Descripción de la solicitud*, DNI o NIE, Licencia*, Entorno por el que accedes (APP / SM Aprendizaje / Educamos / SMA+ / Otras plataformas)",
+              "comunidades": "Botiga Cruïlla, Grupo SM, Profesores, SMA, Tienda SM"
+            }
+          },
+          {
+            "nivel": 3,
+            "nombre": "La licencia no se corresponde con el contenido",
+            "campos": [
+              {
+                "nombre": "Nombre",
+                "obligatorio": true
+              },
+              {
+                "nombre": "Apellidos",
+                "obligatorio": true
+              },
+              {
+                "nombre": "Email",
+                "obligatorio": true
+              },
+              {
+                "nombre": "Teléfono",
+                "obligatorio": false
+              },
+              {
+                "nombre": "Descripción de la solicitud",
+                "obligatorio": true
+              },
+              {
+                "nombre": "DNI o NIE",
+                "obligatorio": false
+              },
+              {
+                "nombre": "Licencia",
+                "obligatorio": true
+              },
+              {
+                "nombre": "Entorno por el que accedes (APP / SM Aprendizaje / Educamos / SMA+ / Otras plataformas)",
+                "obligatorio": false
+              }
+            ],
+            "comunidades": [
+              "Botiga Cruïlla",
+              "Grupo SM",
+              "Profesores",
+              "SMA",
+              "Tienda SM"
+            ],
+            "todas_las_comunidades": false,
+            "fila_excel": 24,
+            "valores_originales": {
+              "detalle": "La licencia no se corresponde con el contenido",
+              "campos_formulario": "Nombre*, Apellidos*, Email*, Teléfono, Descripción de la solicitud*, DNI o NIE, Licencia*, Entorno por el que accedes (APP / SM Aprendizaje / Educamos / SMA+ / Otras plataformas)",
+              "comunidades": "Botiga Cruïlla, Grupo SM, Profesores, SMA, Tienda SM"
+            }
+          }
+        ]
+      },
+      {
+        "nivel": 2,
+        "nombre": "Libro digital",
+        "slug": "libro-digital",
+        "hijos": [
+          {
+            "nivel": 3,
+            "nombre": "He encontrado una errata en el libro digital",
+            "campos": [
+              {
+                "nombre": "Nombre",
+                "obligatorio": true
+              },
+              {
+                "nombre": "Apellidos",
+                "obligatorio": true
+              },
+              {
+                "nombre": "Email",
+                "obligatorio": true
+              },
+              {
+                "nombre": "Teléfono",
+                "obligatorio": false
+              },
+              {
+                "nombre": "Descripción de la solicitud",
+                "obligatorio": true
+              },
+              {
+                "nombre": "DNI o NIE",
+                "obligatorio": false
+              },
+              {
+                "nombre": "Licencia",
+                "obligatorio": true
+              },
+              {
+                "nombre": "Entorno por el que accedes (APP / SM Aprendizaje / Educamos / SMA+ / Otras plataformas)",
+                "obligatorio": false
+              }
+            ],
+            "comunidades": [
+              "Botiga Cruïlla",
+              "Grupo SM",
+              "Profesores",
+              "SMA",
+              "Tienda SM"
+            ],
+            "todas_las_comunidades": false,
+            "fila_excel": 25,
+            "valores_originales": {
+              "detalle": "He encontrado una errata en el libro digital",
+              "campos_formulario": "Nombre*, Apellidos*, Email*, Teléfono, Descripción de la solicitud*, DNI o NIE, Licencia*, Entorno por el que accedes (APP / SM Aprendizaje / Educamos / SMA+ / Otras plataformas)",
+              "comunidades": "Botiga Cruïlla, Grupo SM, Profesores, SMA, Tienda SM"
+            }
+          },
+          {
+            "nivel": 3,
+            "nombre": "Falta contenido en el libro digital",
+            "campos": [
+              {
+                "nombre": "Nombre",
+                "obligatorio": true
+              },
+              {
+                "nombre": "Apellidos",
+                "obligatorio": true
+              },
+              {
+                "nombre": "Email",
+                "obligatorio": true
+              },
+              {
+                "nombre": "Teléfono",
+                "obligatorio": false
+              },
+              {
+                "nombre": "Descripción de la solicitud",
+                "obligatorio": true
+              },
+              {
+                "nombre": "DNI o NIE",
+                "obligatorio": false
+              },
+              {
+                "nombre": "Licencia",
+                "obligatorio": true
+              },
+              {
+                "nombre": "Entorno por el que accedes (APP / SM Aprendizaje / Educamos / SMA+ / Otras plataformas)",
+                "obligatorio": false
+              }
+            ],
+            "comunidades": [
+              "Botiga Cruïlla",
+              "Grupo SM",
+              "Profesores",
+              "SMA",
+              "Tienda SM"
+            ],
+            "todas_las_comunidades": false,
+            "fila_excel": 26,
+            "valores_originales": {
+              "detalle": "Falta contenido en el libro digital",
+              "campos_formulario": "Nombre*, Apellidos*, Email*, Teléfono, Descripción de la solicitud*, DNI o NIE, Licencia*, Entorno por el que accedes (APP / SM Aprendizaje / Educamos / SMA+ / Otras plataformas)",
+              "comunidades": "Botiga Cruïlla, Grupo SM, Profesores, SMA, Tienda SM"
+            }
+          },
+          {
+            "nivel": 3,
+            "nombre": "No funciona un recurso del libro digital",
+            "campos": [
+              {
+                "nombre": "Nombre",
+                "obligatorio": true
+              },
+              {
+                "nombre": "Apellidos",
+                "obligatorio": true
+              },
+              {
+                "nombre": "Email",
+                "obligatorio": true
+              },
+              {
+                "nombre": "Teléfono",
+                "obligatorio": false
+              },
+              {
+                "nombre": "Descripción de la solicitud",
+                "obligatorio": true
+              },
+              {
+                "nombre": "DNI o NIE",
+                "obligatorio": false
+              },
+              {
+                "nombre": "Licencia",
+                "obligatorio": true
+              },
+              {
+                "nombre": "Entorno por el que accedes (APP / SM Aprendizaje / Educamos / SMA+ / Otras plataformas)",
+                "obligatorio": false
+              }
+            ],
+            "comunidades": [
+              "Botiga Cruïlla",
+              "Grupo SM",
+              "Profesores",
+              "SMA",
+              "Tienda SM"
+            ],
+            "todas_las_comunidades": false,
+            "fila_excel": 27,
+            "valores_originales": {
+              "detalle": "No funciona un recurso del libro digital",
+              "campos_formulario": "Nombre*, Apellidos*, Email*, Teléfono, Descripción de la solicitud*, DNI o NIE, Licencia*, Entorno por el que accedes (APP / SM Aprendizaje / Educamos / SMA+ / Otras plataformas)",
+              "comunidades": "Botiga Cruïlla, Grupo SM, Profesores, SMA, Tienda SM"
+            }
+          },
+          {
+            "nivel": 3,
+            "nombre": "Incidencia en grupo de clase",
+            "campos": [
+              {
+                "nombre": "Nombre",
+                "obligatorio": true
+              },
+              {
+                "nombre": "Apellidos",
+                "obligatorio": true
+              },
+              {
+                "nombre": "Email",
+                "obligatorio": true
+              },
+              {
+                "nombre": "Teléfono",
+                "obligatorio": false
+              },
+              {
+                "nombre": "Descripción de la solicitud",
+                "obligatorio": true
+              },
+              {
+                "nombre": "DNI o NIE",
+                "obligatorio": false
+              },
+              {
+                "nombre": "Licencia",
+                "obligatorio": true
+              },
+              {
+                "nombre": "Entorno por el que accedes (APP / SM Aprendizaje / Educamos / SMA+ / Otras plataformas)",
+                "obligatorio": false
+              }
+            ],
+            "comunidades": [
+              "Botiga Cruïlla",
+              "Grupo SM",
+              "Profesores",
+              "SMA",
+              "Tienda SM"
+            ],
+            "todas_las_comunidades": false,
+            "fila_excel": 28,
+            "valores_originales": {
+              "detalle": "Incidencia en grupo de clase",
+              "campos_formulario": "Nombre*, Apellidos*, Email*, Teléfono, Descripción de la solicitud*, DNI o NIE, Licencia*, Entorno por el que accedes (APP / SM Aprendizaje / Educamos / SMA+ / Otras plataformas)",
+              "comunidades": "Botiga Cruïlla, Grupo SM, Profesores, SMA, Tienda SM"
+            }
+          }
+        ]
+      },
+      {
+        "nivel": 2,
+        "nombre": "Entorno digital",
+        "slug": "entorno-digital",
+        "hijos": [
+          {
+            "nivel": 3,
+            "nombre": "Incidencias con la app",
+            "campos": [
+              {
+                "nombre": "Nombre",
+                "obligatorio": true
+              },
+              {
+                "nombre": "Apellidos",
+                "obligatorio": true
+              },
+              {
+                "nombre": "Email",
+                "obligatorio": true
+              },
+              {
+                "nombre": "Teléfono",
+                "obligatorio": false
+              },
+              {
+                "nombre": "Descripción de la solicitud",
+                "obligatorio": true
+              }
+            ],
+            "comunidades": [
+              "Botiga Cruïlla",
+              "Grupo SM",
+              "Profesores",
+              "SMA",
+              "Tienda SM"
+            ],
+            "todas_las_comunidades": false,
+            "fila_excel": 29,
+            "valores_originales": {
+              "detalle": "Incidencias con la app",
+              "campos_formulario": "Nombre*, Apellidos*, Email*, Teléfono, Descripción de la solicitud*",
+              "comunidades": "Botiga Cruïlla, Grupo SM, Profesores, SMA, Tienda SM"
+            }
+          },
+          {
+            "nivel": 3,
+            "nombre": "Incidencia en el entorno digital",
+            "campos": [
+              {
+                "nombre": "Nombre",
+                "obligatorio": true
+              },
+              {
+                "nombre": "Apellidos",
+                "obligatorio": true
+              },
+              {
+                "nombre": "Email",
+                "obligatorio": true
+              },
+              {
+                "nombre": "Teléfono",
+                "obligatorio": false
+              },
+              {
+                "nombre": "Descripción de la solicitud",
+                "obligatorio": true
+              }
+            ],
+            "comunidades": [
+              "Botiga Cruïlla",
+              "Grupo SM",
+              "Profesores",
+              "SMA",
+              "Tienda SM"
+            ],
+            "todas_las_comunidades": false,
+            "fila_excel": 30,
+            "valores_originales": {
+              "detalle": "Incidencia en el entorno digital",
+              "campos_formulario": "Nombre*, Apellidos*, Email*, Teléfono, Descripción de la solicitud*",
+              "comunidades": "Botiga Cruïlla, Grupo SM, Profesores, SMA, Tienda SM"
+            }
+          },
+          {
+            "nivel": 3,
+            "nombre": "Error técnico en la web",
+            "campos": [
+              {
+                "nombre": "Nombre",
+                "obligatorio": true
+              },
+              {
+                "nombre": "Apellidos",
+                "obligatorio": true
+              },
+              {
+                "nombre": "Email",
+                "obligatorio": true
+              },
+              {
+                "nombre": "Teléfono",
+                "obligatorio": false
+              },
+              {
+                "nombre": "Descripción de la solicitud",
+                "obligatorio": true
+              }
+            ],
+            "comunidades": [
+              "Botiga Cruïlla",
+              "Grupo SM",
+              "Profesores",
+              "SMA",
+              "Tienda SM"
+            ],
+            "todas_las_comunidades": false,
+            "fila_excel": 31,
+            "valores_originales": {
+              "detalle": "Error técnico en la web",
+              "campos_formulario": "Nombre*, Apellidos*, Email*, Teléfono, Descripción de la solicitud*",
+              "comunidades": "Botiga Cruïlla, Grupo SM, Profesores, SMA, Tienda SM"
+            }
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "nivel": 1,
+    "rama": "Origen",
+    "idioma": "Espanol",
+    "nombre": "Soporte para familias",
+    "slug": "familiass",
+    "hijos": [
+      {
+        "nivel": 2,
+        "nombre": "Creación de cuenta",
+        "slug": "creacion-cuenta",
+        "hijos": [
+          {
+            "nivel": 3,
+            "nombre": "No encuentro mi centro educativo durante el alta",
+            "campos": [
+              {
+                "nombre": "Nombre",
+                "obligatorio": true
+              },
+              {
+                "nombre": "Apellidos",
+                "obligatorio": true
+              },
+              {
+                "nombre": "Email",
+                "obligatorio": true
+              },
+              {
+                "nombre": "Teléfono",
+                "obligatorio": false
+              },
+              {
+                "nombre": "Descripción de la solicitud",
+                "obligatorio": true
+              },
+              {
+                "nombre": "Nombre del centro eduactivo",
+                "obligatorio": true
+              },
+              {
+                "nombre": "Código Postal",
+                "obligatorio": true
+              }
+            ],
+            "comunidades": [
+              "Botiga Cruïlla",
+              "Grupo SM",
+              "Tienda SM"
+            ],
+            "todas_las_comunidades": false,
+            "fila_excel": 32,
+            "valores_originales": {
+              "detalle": "No encuentro mi centro educativo durante el alta",
+              "campos_formulario": "Nombre*, Apellidos*, Email*, Teléfono, Descripción de la solicitud*, Nombre del centro eduactivo*, Código Postal*",
+              "comunidades": "Botiga Cruïlla, Grupo SM, Tienda SM"
+            }
+          }
+        ]
+      },
+      {
+        "nivel": 2,
+        "nombre": "Mi cuenta",
+        "slug": "mi-cuenta",
+        "hijos": [
+          {
+            "nivel": 3,
+            "nombre": "Cambiar mi usuario",
+            "campos": [
+              {
+                "nombre": "Nombre",
+                "obligatorio": true
+              },
+              {
+                "nombre": "Apellidos",
+                "obligatorio": true
+              },
+              {
+                "nombre": "Email",
+                "obligatorio": true
+              },
+              {
+                "nombre": "Teléfono",
+                "obligatorio": false
+              },
+              {
+                "nombre": "Descripción de la solicitud",
+                "obligatorio": true
+              }
+            ],
+            "comunidades": [
+              "Botiga Cruïlla",
+              "Grupo SM",
+              "Tienda SM"
+            ],
+            "todas_las_comunidades": false,
+            "fila_excel": 33,
+            "valores_originales": {
+              "detalle": "Cambiar mi usuario",
+              "campos_formulario": "Nombre*, Apellidos*, Email*, Teléfono, Descripción de la solicitud*",
+              "comunidades": "Botiga Cruïlla, Grupo SM, Tienda SM"
+            }
+          }
+        ]
+      },
+      {
+        "nivel": 2,
+        "nombre": "Mis pedidos",
+        "slug": "mis-pedidos",
+        "hijos": [
+          {
+            "nivel": 3,
+            "nombre": "No he recibido la licencia digital",
+            "campos": [
+              {
+                "nombre": "Nombre",
+                "obligatorio": true
+              },
+              {
+                "nombre": "Apellidos",
+                "obligatorio": true
+              },
+              {
+                "nombre": "Email",
+                "obligatorio": true
+              },
+              {
+                "nombre": "Teléfono",
+                "obligatorio": false
+              },
+              {
+                "nombre": "Descripción de la solicitud",
+                "obligatorio": true
+              },
+              {
+                "nombre": "Número de pedido",
+                "obligatorio": false
+              },
+              {
+                "nombre": "albarán o factura",
+                "obligatorio": false
+              },
+              {
+                "nombre": "Fecha del pedido",
+                "obligatorio": false
+              },
+              {
+                "nombre": "¿Cómo realizaste tu pedido? (Web / Asesor / Otros)",
+                "obligatorio": false
+              }
+            ],
+            "comunidades": [
+              "Botiga Cruïlla",
+              "Grupo SM",
+              "Tienda SM"
+            ],
+            "todas_las_comunidades": false,
+            "fila_excel": 34,
+            "valores_originales": {
+              "detalle": "No he recibido la licencia digital",
+              "campos_formulario": "Nombre*, Apellidos*, Email*, Teléfono, Descripción de la solicitud*, Número de pedido, albarán o factura, Fecha del pedido, ¿Cómo realizaste tu pedido? (Web / Asesor / Otros)",
+              "comunidades": "Botiga Cruïlla, Grupo SM, Tienda SM"
+            }
+          },
+          {
+            "nivel": 3,
+            "nombre": "Incidencia en la entrega de un pedido",
+            "campos": [
+              {
+                "nombre": "Nombre",
+                "obligatorio": true
+              },
+              {
+                "nombre": "Apellidos",
+                "obligatorio": true
+              },
+              {
+                "nombre": "Email",
+                "obligatorio": true
+              },
+              {
+                "nombre": "Teléfono",
+                "obligatorio": false
+              },
+              {
+                "nombre": "Descripción de la solicitud",
+                "obligatorio": true
+              },
+              {
+                "nombre": "Número de pedido",
+                "obligatorio": false
+              },
+              {
+                "nombre": "albarán o factura",
+                "obligatorio": false
+              },
+              {
+                "nombre": "Fecha del pedido",
+                "obligatorio": false
+              },
+              {
+                "nombre": "¿Cómo realizaste tu pedido? (Web / Asesor / Otros)",
+                "obligatorio": false
+              }
+            ],
+            "comunidades": [
+              "Botiga Cruïlla",
+              "Grupo SM",
+              "Tienda SM"
+            ],
+            "todas_las_comunidades": false,
+            "fila_excel": 35,
+            "valores_originales": {
+              "detalle": "Incidencia en la entrega de un pedido",
+              "campos_formulario": "Nombre*, Apellidos*, Email*, Teléfono, Descripción de la solicitud*, Número de pedido, albarán o factura, Fecha del pedido, ¿Cómo realizaste tu pedido? (Web / Asesor / Otros)",
+              "comunidades": "Botiga Cruïlla, Grupo SM, Tienda SM"
+            }
+          },
+          {
+            "nivel": 3,
+            "nombre": "El importe pagado no corresponde con el importe de la factura",
+            "campos": [
+              {
+                "nombre": "Nombre",
+                "obligatorio": true
+              },
+              {
+                "nombre": "Apellidos",
+                "obligatorio": true
+              },
+              {
+                "nombre": "Email",
+                "obligatorio": true
+              },
+              {
+                "nombre": "Teléfono",
+                "obligatorio": false
+              },
+              {
+                "nombre": "Descripción de la solicitud",
+                "obligatorio": true
+              },
+              {
+                "nombre": "Número de pedido",
+                "obligatorio": false
+              },
+              {
+                "nombre": "albarán o factura",
+                "obligatorio": false
+              },
+              {
+                "nombre": "Fecha del pedido",
+                "obligatorio": false
+              },
+              {
+                "nombre": "¿Cómo realizaste tu pedido? (Web / Asesor / Otros)",
+                "obligatorio": false
+              }
+            ],
+            "comunidades": [
+              "Botiga Cruïlla",
+              "Grupo SM",
+              "Tienda SM"
+            ],
+            "todas_las_comunidades": false,
+            "fila_excel": 36,
+            "valores_originales": {
+              "detalle": "El importe pagado no corresponde con el importe de la factura",
+              "campos_formulario": "Nombre*, Apellidos*, Email*, Teléfono, Descripción de la solicitud*, Número de pedido, albarán o factura, Fecha del pedido, ¿Cómo realizaste tu pedido? (Web / Asesor / Otros)",
+              "comunidades": "Botiga Cruïlla, Grupo SM, Tienda SM"
+            }
+          },
+          {
+            "nivel": 3,
+            "nombre": "Incidencia en la factura",
+            "campos": [
+              {
+                "nombre": "Nombre",
+                "obligatorio": true
+              },
+              {
+                "nombre": "Apellidos",
+                "obligatorio": true
+              },
+              {
+                "nombre": "Email",
+                "obligatorio": true
+              },
+              {
+                "nombre": "Teléfono",
+                "obligatorio": false
+              },
+              {
+                "nombre": "Descripción de la solicitud",
+                "obligatorio": true
+              },
+              {
+                "nombre": "Número de pedido",
+                "obligatorio": false
+              },
+              {
+                "nombre": "albarán o factura",
+                "obligatorio": false
+              },
+              {
+                "nombre": "Fecha del pedido",
+                "obligatorio": false
+              },
+              {
+                "nombre": "¿Cómo realizaste tu pedido? (Web / Asesor / Otros)",
+                "obligatorio": false
+              }
+            ],
+            "comunidades": [
+              "Botiga Cruïlla",
+              "Grupo SM",
+              "Tienda SM"
+            ],
+            "todas_las_comunidades": false,
+            "fila_excel": 37,
+            "valores_originales": {
+              "detalle": "Incidencia en la factura",
+              "campos_formulario": "Nombre*, Apellidos*, Email*, Teléfono, Descripción de la solicitud*, Número de pedido, albarán o factura, Fecha del pedido, ¿Cómo realizaste tu pedido? (Web / Asesor / Otros)",
+              "comunidades": "Botiga Cruïlla, Grupo SM, Tienda SM"
+            }
+          }
+        ]
+      },
+      {
+        "nivel": 2,
+        "nombre": "Problemas haciendo un pedido",
+        "slug": "problemas-pedido",
+        "hijos": [
+          {
+            "nivel": 3,
+            "nombre": "No puedo aplicar un código de descuento",
+            "campos": [
+              {
+                "nombre": "Nombre",
+                "obligatorio": true
+              },
+              {
+                "nombre": "Apellidos",
+                "obligatorio": true
+              },
+              {
+                "nombre": "Email",
+                "obligatorio": true
+              },
+              {
+                "nombre": "Teléfono",
+                "obligatorio": false
+              },
+              {
+                "nombre": "Descripción de la solicitud",
+                "obligatorio": true
+              }
+            ],
+            "comunidades": [
+              "Botiga Cruïlla",
+              "Grupo SM",
+              "Tienda SM"
+            ],
+            "todas_las_comunidades": false,
+            "fila_excel": 38,
+            "valores_originales": {
+              "detalle": "No puedo aplicar un código de descuento",
+              "campos_formulario": "Nombre*, Apellidos*, Email*, Teléfono, Descripción de la solicitud*",
+              "comunidades": "Botiga Cruïlla, Grupo SM, Tienda SM"
+            }
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "nivel": 1,
+    "rama": "Origen",
+    "idioma": "Espanol",
+    "nombre": "Consulta Comercial",
+    "slug": "contacto-comercial",
+    "hijos": [
+      {
+        "nivel": 2,
+        "nombre": "Muestras y Recursos Didácticos",
+        "slug": "muestras-recursos",
+        "hijos": [
+          {
+            "nivel": 3,
+            "nombre": "Ver material para valorar la prescripción",
+            "campos": [
+              {
+                "nombre": "Nombre",
+                "obligatorio": true
+              },
+              {
+                "nombre": "Apellidos",
+                "obligatorio": true
+              },
+              {
+                "nombre": "Email",
+                "obligatorio": true
+              },
+              {
+                "nombre": "Teléfono",
+                "obligatorio": false
+              },
+              {
+                "nombre": "Descripción de la solicitud",
+                "obligatorio": true
+              }
+            ],
+            "comunidades": [
+              "Botiga Cruïlla",
+              "Cruïlla",
+              "Grupo SM",
+              "Profesores",
+              "SMA",
+              "Tienda SM"
+            ],
+            "todas_las_comunidades": false,
+            "fila_excel": 39,
+            "valores_originales": {
+              "detalle": "Ver material para valorar la prescripción",
+              "campos_formulario": "Nombre*, Apellidos*, Email*, Teléfono, Descripción de la solicitud*",
+              "comunidades": "Botiga Cruïlla, Cruïlla, Grupo SM, Profesores, SMA, Tienda SM"
+            }
+          },
+          {
+            "nivel": 3,
+            "nombre": "Necesito reponer un Recurso Didáctico",
+            "campos": [
+              {
+                "nombre": "Nombre",
+                "obligatorio": true
+              },
+              {
+                "nombre": "Apellidos",
+                "obligatorio": true
+              },
+              {
+                "nombre": "Email",
+                "obligatorio": true
+              },
+              {
+                "nombre": "Teléfono",
+                "obligatorio": false
+              },
+              {
+                "nombre": "Descripción de la solicitud",
+                "obligatorio": true
+              }
+            ],
+            "comunidades": [
+              "Botiga Cruïlla",
+              "Cruïlla",
+              "Grupo SM",
+              "Profesores",
+              "SMA",
+              "Tienda SM"
+            ],
+            "todas_las_comunidades": false,
+            "fila_excel": 40,
+            "valores_originales": {
+              "detalle": "Necesito reponer un Recurso Didáctico",
+              "campos_formulario": "Nombre*, Apellidos*, Email*, Teléfono, Descripción de la solicitud*",
+              "comunidades": "Botiga Cruïlla, Cruïlla, Grupo SM, Profesores, SMA, Tienda SM"
+            }
+          },
+          {
+            "nivel": 3,
+            "nombre": "Necesito un Recurso Didáctico",
+            "campos": [
+              {
+                "nombre": "Nombre",
+                "obligatorio": true
+              },
+              {
+                "nombre": "Apellidos",
+                "obligatorio": true
+              },
+              {
+                "nombre": "Email",
+                "obligatorio": true
+              },
+              {
+                "nombre": "Teléfono",
+                "obligatorio": false
+              },
+              {
+                "nombre": "Descripción de la solicitud",
+                "obligatorio": true
+              }
+            ],
+            "comunidades": [
+              "Botiga Cruïlla",
+              "Cruïlla",
+              "Grupo SM",
+              "Profesores",
+              "SMA",
+              "Tienda SM"
+            ],
+            "todas_las_comunidades": false,
+            "fila_excel": 41,
+            "valores_originales": {
+              "detalle": "Necesito un Recurso Didáctico",
+              "campos_formulario": "Nombre*, Apellidos*, Email*, Teléfono, Descripción de la solicitud*",
+              "comunidades": "Botiga Cruïlla, Cruïlla, Grupo SM, Profesores, SMA, Tienda SM"
+            }
+          },
+          {
+            "nivel": 3,
+            "nombre": "Necesito una Licencia Digital",
+            "campos": [
+              {
+                "nombre": "Nombre",
+                "obligatorio": true
+              },
+              {
+                "nombre": "Apellidos",
+                "obligatorio": true
+              },
+              {
+                "nombre": "Email",
+                "obligatorio": true
+              },
+              {
+                "nombre": "Teléfono",
+                "obligatorio": false
+              },
+              {
+                "nombre": "Descripción de la solicitud",
+                "obligatorio": true
+              }
+            ],
+            "comunidades": [
+              "Botiga Cruïlla",
+              "Cruïlla",
+              "Grupo SM",
+              "Profesores",
+              "SMA",
+              "Tienda SM"
+            ],
+            "todas_las_comunidades": false,
+            "fila_excel": 42,
+            "valores_originales": {
+              "detalle": "Necesito una Licencia Digital",
+              "campos_formulario": "Nombre*, Apellidos*, Email*, Teléfono, Descripción de la solicitud*",
+              "comunidades": "Botiga Cruïlla, Cruïlla, Grupo SM, Profesores, SMA, Tienda SM"
+            }
+          },
+          {
+            "nivel": 3,
+            "nombre": "Muestra para valorar la prescripción de un libro",
+            "campos": [
+              {
+                "nombre": "Nombre",
+                "obligatorio": true
+              },
+              {
+                "nombre": "Apellidos",
+                "obligatorio": true
+              },
+              {
+                "nombre": "Email",
+                "obligatorio": true
+              },
+              {
+                "nombre": "Teléfono",
+                "obligatorio": false
+              },
+              {
+                "nombre": "Descripción de la solicitud",
+                "obligatorio": true
+              }
+            ],
+            "comunidades": [
+              "Botiga Cruïlla",
+              "Cruïlla",
+              "Grupo SM",
+              "Profesores",
+              "SMA",
+              "Tienda SM"
+            ],
+            "todas_las_comunidades": false,
+            "fila_excel": 43,
+            "valores_originales": {
+              "detalle": "Muestra para valorar la prescripción de un libro",
+              "campos_formulario": "Nombre*, Apellidos*, Email*, Teléfono, Descripción de la solicitud*",
+              "comunidades": "Botiga Cruïlla, Cruïlla, Grupo SM, Profesores, SMA, Tienda SM"
+            }
+          },
+          {
+            "nivel": 3,
+            "nombre": "Necesito presupuesto para hacer un pedido",
+            "campos": [
+              {
+                "nombre": "Nombre",
+                "obligatorio": true
+              },
+              {
+                "nombre": "Apellidos",
+                "obligatorio": true
+              },
+              {
+                "nombre": "Email",
+                "obligatorio": true
+              },
+              {
+                "nombre": "Teléfono",
+                "obligatorio": false
+              },
+              {
+                "nombre": "Descripción de la solicitud",
+                "obligatorio": true
+              }
+            ],
+            "comunidades": [
+              "Botiga Cruïlla",
+              "Cruïlla",
+              "Grupo SM",
+              "Profesores",
+              "SMA",
+              "Tienda SM"
+            ],
+            "todas_las_comunidades": false,
+            "fila_excel": 44,
+            "valores_originales": {
+              "detalle": "Necesito presupuesto para hacer un pedido",
+              "campos_formulario": "Nombre*, Apellidos*, Email*, Teléfono, Descripción de la solicitud*",
+              "comunidades": "Botiga Cruïlla, Cruïlla, Grupo SM, Profesores, SMA, Tienda SM"
+            }
+          }
+        ]
+      },
+      {
+        "nivel": 2,
+        "nombre": "Plan Lector",
+        "slug": "plan-lector",
+        "hijos": [
+          {
+            "nivel": 3,
+            "nombre": "Recomendación para mis alumnos",
+            "campos": [
+              {
+                "nombre": "Nombre",
+                "obligatorio": true
+              },
+              {
+                "nombre": "Apellidos",
+                "obligatorio": true
+              },
+              {
+                "nombre": "Email",
+                "obligatorio": true
+              },
+              {
+                "nombre": "Teléfono",
+                "obligatorio": false
+              },
+              {
+                "nombre": "Descripción de la solicitud",
+                "obligatorio": true
+              }
+            ],
+            "comunidades": [
+              "Botiga Cruïlla",
+              "Cruïlla",
+              "Grupo SM",
+              "Profesores",
+              "SMA",
+              "Tienda SM"
+            ],
+            "todas_las_comunidades": false,
+            "fila_excel": 45,
+            "valores_originales": {
+              "detalle": "Recomendación para mis alumnos",
+              "campos_formulario": "Nombre*, Apellidos*, Email*, Teléfono, Descripción de la solicitud*",
+              "comunidades": "Botiga Cruïlla, Cruïlla, Grupo SM, Profesores, SMA, Tienda SM"
+            }
+          },
+          {
+            "nivel": 3,
+            "nombre": "Quiero hacer un encuentro con autor",
+            "campos": [
+              {
+                "nombre": "Nombre",
+                "obligatorio": true
+              },
+              {
+                "nombre": "Apellidos",
+                "obligatorio": true
+              },
+              {
+                "nombre": "Email",
+                "obligatorio": true
+              },
+              {
+                "nombre": "Teléfono",
+                "obligatorio": false
+              },
+              {
+                "nombre": "Descripción de la solicitud",
+                "obligatorio": true
+              }
+            ],
+            "comunidades": [
+              "Botiga Cruïlla",
+              "Cruïlla",
+              "Grupo SM",
+              "Profesores",
+              "SMA",
+              "Tienda SM"
+            ],
+            "todas_las_comunidades": false,
+            "fila_excel": 46,
+            "valores_originales": {
+              "detalle": "Quiero hacer un encuentro con autor",
+              "campos_formulario": "Nombre*, Apellidos*, Email*, Teléfono, Descripción de la solicitud*",
+              "comunidades": "Botiga Cruïlla, Cruïlla, Grupo SM, Profesores, SMA, Tienda SM"
+            }
+          },
+          {
+            "nivel": 3,
+            "nombre": "Quiero hacer una animación a la lectura",
+            "campos": [
+              {
+                "nombre": "Nombre",
+                "obligatorio": true
+              },
+              {
+                "nombre": "Apellidos",
+                "obligatorio": true
+              },
+              {
+                "nombre": "Email",
+                "obligatorio": true
+              },
+              {
+                "nombre": "Teléfono",
+                "obligatorio": false
+              },
+              {
+                "nombre": "Descripción de la solicitud",
+                "obligatorio": true
+              }
+            ],
+            "comunidades": [
+              "Botiga Cruïlla",
+              "Cruïlla",
+              "Grupo SM",
+              "Profesores",
+              "SMA",
+              "Tienda SM"
+            ],
+            "todas_las_comunidades": false,
+            "fila_excel": 47,
+            "valores_originales": {
+              "detalle": "Quiero hacer una animación a la lectura",
+              "campos_formulario": "Nombre*, Apellidos*, Email*, Teléfono, Descripción de la solicitud*",
+              "comunidades": "Botiga Cruïlla, Cruïlla, Grupo SM, Profesores, SMA, Tienda SM"
+            }
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "nivel": 1,
+    "rama": "Camino",
+    "idioma": "Espanol",
+    "nombre": "Protección de datos",
+    "slug": "dpo",
+    "hijos": [
+      {
+        "nivel": 2,
+        "nombre": "99",
+        "slug": "99",
+        "hijos": [
+          {
+            "nivel": 3,
+            "nombre": "Consulta general de protección de datos",
+            "campos": [
+              {
+                "nombre": "Nombre",
+                "obligatorio": true
+              },
+              {
+                "nombre": "Apellidos",
+                "obligatorio": true
+              },
+              {
+                "nombre": "Email",
+                "obligatorio": true
+              },
+              {
+                "nombre": "Descripción de la solicitud",
+                "obligatorio": true
+              },
+              {
+                "nombre": "Selecciona un país (España / Brasil / México / Chile / Puerto Rico / República Dominicana / Colombia / Argentina / Perú / Ecuador)",
+                "obligatorio": false
+              }
+            ],
+            "comunidades": [
+              "99"
+            ],
+            "todas_las_comunidades": false,
+            "fila_excel": 48,
+            "valores_originales": {
+              "detalle": "Consulta general de protección de datos",
+              "campos_formulario": "Nombre*, Apellidos*, Email*, Descripción de la solicitud*, Selecciona un país (España / Brasil / México / Chile / Puerto Rico / República Dominicana / Colombia / Argentina / Perú / Ecuador)",
+              "comunidades": "99"
+            }
+          },
+          {
+            "nivel": 3,
+            "nombre": "Ejercicio de derechos",
+            "campos": [
+              {
+                "nombre": "Nombre",
+                "obligatorio": true
+              },
+              {
+                "nombre": "Apellidos",
+                "obligatorio": true
+              },
+              {
+                "nombre": "Email",
+                "obligatorio": true
+              },
+              {
+                "nombre": "Descripción de la solicitud",
+                "obligatorio": true
+              },
+              {
+                "nombre": "Selecciona un país (España / Brasil / México / Chile / Puerto Rico / República Dominicana / Colombia / Argentina / Perú / Ecuador)",
+                "obligatorio": false
+              }
+            ],
+            "comunidades": [
+              "99"
+            ],
+            "todas_las_comunidades": false,
+            "fila_excel": 49,
+            "valores_originales": {
+              "detalle": "Ejercicio de derechos",
+              "campos_formulario": "Nombre*, Apellidos*, Email*, Descripción de la solicitud*, Selecciona un país (España / Brasil / México / Chile / Puerto Rico / República Dominicana / Colombia / Argentina / Perú / Ecuador)",
+              "comunidades": "99"
+            }
+          },
+          {
+            "nivel": 3,
+            "nombre": "Ejercicio de derechos - Acceso",
+            "campos": [
+              {
+                "nombre": "Nombre",
+                "obligatorio": true
+              },
+              {
+                "nombre": "Apellidos",
+                "obligatorio": true
+              },
+              {
+                "nombre": "Email",
+                "obligatorio": true
+              },
+              {
+                "nombre": "Descripción de la solicitud",
+                "obligatorio": true
+              },
+              {
+                "nombre": "Selecciona un país (España / Brasil / México / Chile / Puerto Rico / República Dominicana / Colombia / Argentina / Perú / Ecuador)",
+                "obligatorio": false
+              }
+            ],
+            "comunidades": [
+              "99"
+            ],
+            "todas_las_comunidades": false,
+            "fila_excel": 50,
+            "valores_originales": {
+              "detalle": "Ejercicio de derechos - Acceso",
+              "campos_formulario": "Nombre*, Apellidos*, Email*, Descripción de la solicitud*, Selecciona un país (España / Brasil / México / Chile / Puerto Rico / República Dominicana / Colombia / Argentina / Perú / Ecuador)",
+              "comunidades": "99"
+            }
+          },
+          {
+            "nivel": 3,
+            "nombre": "Ejercicio de derechos - Rectificación",
+            "campos": [
+              {
+                "nombre": "Nombre",
+                "obligatorio": true
+              },
+              {
+                "nombre": "Apellidos",
+                "obligatorio": true
+              },
+              {
+                "nombre": "Email",
+                "obligatorio": true
+              },
+              {
+                "nombre": "Descripción de la solicitud",
+                "obligatorio": true
+              },
+              {
+                "nombre": "Selecciona un país (España / Brasil / México / Chile / Puerto Rico / República Dominicana / Colombia / Argentina / Perú / Ecuador)",
+                "obligatorio": false
+              }
+            ],
+            "comunidades": [
+              "99"
+            ],
+            "todas_las_comunidades": false,
+            "fila_excel": 51,
+            "valores_originales": {
+              "detalle": "Ejercicio de derechos - Rectificación",
+              "campos_formulario": "Nombre*, Apellidos*, Email*, Descripción de la solicitud*, Selecciona un país (España / Brasil / México / Chile / Puerto Rico / República Dominicana / Colombia / Argentina / Perú / Ecuador)",
+              "comunidades": "99"
+            }
+          },
+          {
+            "nivel": 3,
+            "nombre": "Ejercicio de derechos - Supresión",
+            "campos": [
+              {
+                "nombre": "Nombre",
+                "obligatorio": true
+              },
+              {
+                "nombre": "Apellidos",
+                "obligatorio": true
+              },
+              {
+                "nombre": "Email",
+                "obligatorio": true
+              },
+              {
+                "nombre": "Descripción de la solicitud",
+                "obligatorio": true
+              },
+              {
+                "nombre": "Selecciona un país (España / Brasil / México / Chile / Puerto Rico / República Dominicana / Colombia / Argentina / Perú / Ecuador)",
+                "obligatorio": false
+              }
+            ],
+            "comunidades": [
+              "99"
+            ],
+            "todas_las_comunidades": false,
+            "fila_excel": 52,
+            "valores_originales": {
+              "detalle": "Ejercicio de derechos - Supresión",
+              "campos_formulario": "Nombre*, Apellidos*, Email*, Descripción de la solicitud*, Selecciona un país (España / Brasil / México / Chile / Puerto Rico / República Dominicana / Colombia / Argentina / Perú / Ecuador)",
+              "comunidades": "99"
+            }
+          },
+          {
+            "nivel": 3,
+            "nombre": "Ejercicio de derechos - Limitación",
+            "campos": [
+              {
+                "nombre": "Nombre",
+                "obligatorio": true
+              },
+              {
+                "nombre": "Apellidos",
+                "obligatorio": true
+              },
+              {
+                "nombre": "Email",
+                "obligatorio": true
+              },
+              {
+                "nombre": "Descripción de la solicitud",
+                "obligatorio": true
+              },
+              {
+                "nombre": "Selecciona un país (España / Brasil / México / Chile / Puerto Rico / República Dominicana / Colombia / Argentina / Perú / Ecuador)",
+                "obligatorio": false
+              }
+            ],
+            "comunidades": [
+              "99"
+            ],
+            "todas_las_comunidades": false,
+            "fila_excel": 53,
+            "valores_originales": {
+              "detalle": "Ejercicio de derechos - Limitación",
+              "campos_formulario": "Nombre*, Apellidos*, Email*, Descripción de la solicitud*, Selecciona un país (España / Brasil / México / Chile / Puerto Rico / República Dominicana / Colombia / Argentina / Perú / Ecuador)",
+              "comunidades": "99"
+            }
+          },
+          {
+            "nivel": 3,
+            "nombre": "Ejercicio de derechos - Portabilidad",
+            "campos": [
+              {
+                "nombre": "Nombre",
+                "obligatorio": true
+              },
+              {
+                "nombre": "Apellidos",
+                "obligatorio": true
+              },
+              {
+                "nombre": "Email",
+                "obligatorio": true
+              },
+              {
+                "nombre": "Descripción de la solicitud",
+                "obligatorio": true
+              },
+              {
+                "nombre": "Selecciona un país (España / Brasil / México / Chile / Puerto Rico / República Dominicana / Colombia / Argentina / Perú / Ecuador)",
+                "obligatorio": false
+              }
+            ],
+            "comunidades": [
+              "99"
+            ],
+            "todas_las_comunidades": false,
+            "fila_excel": 54,
+            "valores_originales": {
+              "detalle": "Ejercicio de derechos - Portabilidad",
+              "campos_formulario": "Nombre*, Apellidos*, Email*, Descripción de la solicitud*, Selecciona un país (España / Brasil / México / Chile / Puerto Rico / República Dominicana / Colombia / Argentina / Perú / Ecuador)",
+              "comunidades": "99"
+            }
+          },
+          {
+            "nivel": 3,
+            "nombre": "Ejercicio de derechos - Oposición",
+            "campos": [
+              {
+                "nombre": "Nombre",
+                "obligatorio": true
+              },
+              {
+                "nombre": "Apellidos",
+                "obligatorio": true
+              },
+              {
+                "nombre": "Email",
+                "obligatorio": true
+              },
+              {
+                "nombre": "Descripción de la solicitud",
+                "obligatorio": true
+              },
+              {
+                "nombre": "Selecciona un país (España / Brasil / México / Chile / Puerto Rico / República Dominicana / Colombia / Argentina / Perú / Ecuador)",
+                "obligatorio": false
+              }
+            ],
+            "comunidades": [
+              "99"
+            ],
+            "todas_las_comunidades": false,
+            "fila_excel": 55,
+            "valores_originales": {
+              "detalle": "Ejercicio de derechos - Oposición",
+              "campos_formulario": "Nombre*, Apellidos*, Email*, Descripción de la solicitud*, Selecciona un país (España / Brasil / México / Chile / Puerto Rico / República Dominicana / Colombia / Argentina / Perú / Ecuador)",
+              "comunidades": "99"
+            }
+          }
+        ]
+      }
+    ]
+  }
+]
