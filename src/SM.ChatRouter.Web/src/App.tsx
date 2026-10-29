@@ -73,7 +73,10 @@ export default function App() {
       };
 
       setConversationId(response.conversationId);
-      setRoutingMessages(needsContext || retry ? [wire] : [...routingMessages, wire]);
+      // Lo ajeno al soporte de SM no se reenvía como contexto: solo confundiría al modelo.
+      if (reply.fallbackAction !== 'redirect') {
+        setRoutingMessages(needsContext || retry ? [wire] : [...routingMessages, wire]);
+      }
       setNeedsContext(response.outcome === 'Fallback');
       if (reply.fallbackAction === 'reconduct') {
         setRedirects((r) => r + 1);

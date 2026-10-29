@@ -6,6 +6,11 @@ export const config = {
   maxRedirects: Number(import.meta.env.VITE_MAX_REDIRECTS ?? 2) || 0,
 };
 
+/** Reconducción por defecto ante un NoMatch si el modelo no ha redactado la suya. */
+const REDIRECT_TEXT =
+  'Estoy aquí para ayudarte con tus consultas sobre SM: pedidos, licencias digitales, tu cuenta o ' +
+  'materiales docentes. ¿En qué puedo ayudarte?';
+
 export interface FormLink {
   href: string | null;
   /** Lo que se muestra: la ruta N1 > N2 > N3. */
@@ -67,6 +72,13 @@ export function buildBotReply(response: ChatResponse, redirects: number, maxRedi
               'No he terminado de entender tu consulta. ¿Puedes contarme un poco más? Por ejemplo, si eres ' +
               'profesor, alumno, familia o librería, y si es sobre un pedido, una licencia digital, tu cuenta… ' +
               'También puedes elegir uno de estos temas:',
+            showShortcuts: true,
+            fallbackAction: action,
+          };
+        case 'redirect':
+          return {
+            ...base,
+            text: response.question?.trim() || REDIRECT_TEXT,
             showShortcuts: true,
             fallbackAction: action,
           };

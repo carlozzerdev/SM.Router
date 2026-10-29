@@ -16,6 +16,13 @@
       "env": { "API_URL": "http://localhost:5122" },
       "port": 5174,
       "autoPort": false
+    },
+    {
+      "name": "web-vs",
+      "runtimeExecutable": "npm",
+      "runtimeArgs": ["run", "dev", "--prefix", "src/SM.ChatRouter.Web", "--", "--port", "5175"],
+      "port": 5175,
+      "autoPort": false
     }
   ]
 }

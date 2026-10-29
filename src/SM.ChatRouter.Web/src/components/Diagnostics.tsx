@@ -5,6 +5,7 @@ const ACTION_LABELS = {
   reconduct: 'Reconducir (pedir más detalle)',
   retry: 'Reintentar (error técnico)',
   giveUp: 'Rendirse (formulario por defecto)',
+  redirect: 'Reconducir a soporte SM (sin límite)',
 } as const;
 
 export function Diagnostics({ turn, maxRedirects }: { turn: Turn | null; maxRedirects: number }) {

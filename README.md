@@ -142,7 +142,7 @@ Comportamiento del chat según `outcome`:
 
 - `NeedsMoreInformation`: muestra `question` y sigue la conversación.
 - `Routed`: propone el formulario `<VITE_CATEGORY_BASE_URL>/<category.id>` y cierra la conversación.
-- `Fallback`: con `NoMatch`, `LowConfidence` o `UnknownCategory` pide más detalle y ofrece atajos con las categorías de nivel 1, hasta `VITE_MAX_REDIRECTS` veces. Con `AiError` ofrece **Reintentar**. En el resto de casos, o al agotar los intentos, da el formulario de consulta general. Como el servidor cierra la conversación tras un fallback, la web reenvía los mensajes anteriores del usuario junto con la aclaración (`src/fallbackPolicy.ts`).
+- `Fallback`: con `NoMatch` (el usuario habla de algo ajeno al soporte de SM o solo saluda) muestra el mensaje del modelo que le reconduce hacia los temas de SM, con atajos de categorías de nivel 1, sin límite de intentos y sin cerrar la conversación; esos mensajes ajenos no se reenvían como contexto. Con `LowConfidence` o `UnknownCategory` pide más detalle y ofrece atajos con las categorías de nivel 1, hasta `VITE_MAX_REDIRECTS` veces. Con `AiError` ofrece **Reintentar**. En el resto de casos, o al agotar los intentos, da el formulario de consulta general. Como el servidor cierra la conversación tras un fallback, la web reenvía los mensajes anteriores del usuario junto con la aclaración (`src/fallbackPolicy.ts`).
 
 La configuración está en `src/SM.ChatRouter.Web/.env`; los cambios locales van en `.env.local`. El panel derecho muestra el diagnóstico de cada turno (pincha en un mensaje del bot para verlo): categoría, parámetros, campos que faltan, motivo del fallback, texto enviado y JSON.
 

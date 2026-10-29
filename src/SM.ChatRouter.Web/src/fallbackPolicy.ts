@@ -5,13 +5,18 @@ import type { FallbackReason } from './api';
  * - reconduct: pedir al usuario que reformule (con atajos de categorías) y volver a intentarlo.
  * - retry: error técnico; ofrecer reenviar el mismo mensaje.
  * - giveUp: ofrecer el formulario de la categoría por defecto y cerrar la conversación.
+ * - redirect: el usuario habla de algo ajeno al soporte de SM (o solo saluda); se le reconduce
+ *   con el mensaje del modelo, sin cerrar la conversación ni contar intentos.
  */
-export type FallbackAction = 'reconduct' | 'retry' | 'giveUp';
+export type FallbackAction = 'reconduct' | 'retry' | 'giveUp' | 'redirect';
 
 /** Motivos en los que el usuario puede ayudar aportando más detalle. */
-const RECOVERABLE: ReadonlySet<FallbackReason> = new Set(['NoMatch', 'LowConfidence', 'UnknownCategory']);
+const RECOVERABLE: ReadonlySet<FallbackReason> = new Set(['LowConfidence', 'UnknownCategory']);
 
 export function decideFallback(reason: FallbackReason | null, redirects: number, maxRedirects: number): FallbackAction {
+  if (reason === 'NoMatch') {
+    return 'redirect';
+  }
   if (reason === 'AiError') {
     return 'retry';
   }
