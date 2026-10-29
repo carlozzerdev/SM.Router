@@ -166,8 +166,10 @@ export default function App() {
             }
           })}
           {busy && (
-            <div className="bubble bot typing">
-              <p>Pensando…</p>
+            <div className="bubble bot typing" role="status" aria-label="Pensando…">
+              <span />
+              <span />
+              <span />
             </div>
           )}
         </div>
