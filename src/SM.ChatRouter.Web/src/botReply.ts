@@ -1,5 +1,6 @@
-import type { CategorySummary, ChatResponse } from './api';
+import type { Category, CategorySummary, ChatResponse } from './api';
 import { decideFallback, type FallbackAction } from './fallbackPolicy';
+import { shortcutsFor, type CategoryLocation, type Shortcut } from './shortcuts';
 
 export const config = {
   categoryBaseUrl: (import.meta.env.VITE_CATEGORY_BASE_URL ?? '').trim().replace(/\/+$/, ''),
@@ -21,8 +22,8 @@ export interface FormLink {
 export interface BotReply {
   text: string;
   link: FormLink | null;
-  /** Atajos de categorías de primer nivel para reconducir. */
-  showShortcuts: boolean;
+  /** Atajos de categorías (N1, N2 o N3 según la ubicación) que equivalen a escribir su texto. */
+  shortcuts: Shortcut[];
   showRetry: boolean;
   /** Routed o rendición: la conversación termina y hay que empezar otra. */
   closesConversation: boolean;
@@ -38,12 +39,31 @@ export function formLink(category: CategorySummary, baseUrl = config.categoryBas
   };
 }
 
+/** Árbol de categorías y ubicación del usuario en él, para elegir los atajos. */
+export interface Navigation {
+  categories: readonly Category[];
+  location: CategoryLocation | null;
+}
+
 /** Traduce la respuesta del router al mensaje que ve el usuario. */
-export function buildBotReply(response: ChatResponse, redirects: number, maxRedirects = config.maxRedirects): BotReply {
+export function buildBotReply(
+  response: ChatResponse,
+  redirects: number,
+  navigation: Navigation,
+  maxRedirects = config.maxRedirects,
+): BotReply {
+  const reply = buildReply(response, redirects, maxRedirects);
+  return {
+    ...reply,
+    shortcuts: shortcutsFor(response, reply.fallbackAction, navigation.location, navigation.categories),
+  };
+}
+
+function buildReply(response: ChatResponse, redirects: number, maxRedirects: number): BotReply {
   const base: BotReply = {
     text: '',
     link: null,
-    showShortcuts: false,
+    shortcuts: [],
     showRetry: false,
     closesConversation: false,
     fallbackAction: null,
@@ -72,14 +92,12 @@ export function buildBotReply(response: ChatResponse, redirects: number, maxRedi
               'No he terminado de entender tu consulta. ¿Puedes contarme un poco más? Por ejemplo, si eres ' +
               'profesor, alumno, familia o librería, y si es sobre un pedido, una licencia digital, tu cuenta… ' +
               'También puedes elegir uno de estos temas:',
-            showShortcuts: true,
             fallbackAction: action,
           };
         case 'redirect':
           return {
             ...base,
             text: response.question?.trim() || REDIRECT_TEXT,
-            showShortcuts: true,
             fallbackAction: action,
           };
         case 'retry':

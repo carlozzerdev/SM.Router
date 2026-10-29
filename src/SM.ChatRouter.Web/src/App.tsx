@@ -1,9 +1,11 @@
 import { useEffect, useRef, useState, type FormEvent } from 'react';
-import { ApiError, getCategories, resetConversation, sendMessage } from './api';
+import { ApiError, getCategories, resetConversation, sendMessage, type Category } from './api';
 import { buildBotReply, config } from './botReply';
 import { composeRoutingMessage } from './fallbackPolicy';
 import { BotMessage } from './components/BotMessage';
 import { Diagnostics } from './components/Diagnostics';
+import { Shortcuts } from './components/Shortcuts';
+import { level1Shortcuts, type CategoryLocation, type Shortcut } from './shortcuts';
 import type { ChatItem, Turn } from './types';
 
 const WELCOME = 'Hola, cuéntame qué necesitas y te indico el formulario adecuado.';
@@ -14,7 +16,7 @@ export default function App() {
   const [items, setItems] = useState<ChatItem[]>([]);
   const [input, setInput] = useState('');
   const [busy, setBusy] = useState(false);
-  const [shortcuts, setShortcuts] = useState<string[]>([]);
+  const [categories, setCategories] = useState<Category[]>([]);
   const [selectedId, setSelectedId] = useState<number | null>(null);
 
   // Estado de la conversación con el router.
@@ -26,17 +28,16 @@ export default function App() {
   /** Tras un Fallback el servidor ha cerrado la conversación: hay que reenviar el contexto. */
   const [needsContext, setNeedsContext] = useState(false);
   const [lastSent, setLastSent] = useState<string | null>(null);
+  /** Rama del árbol elegida con el último atajo; se pierde al escribir texto libre o tras un Fallback. */
+  const [location, setLocation] = useState<CategoryLocation | null>(null);
 
   const listRef = useRef<HTMLDivElement>(null);
   const inputRef = useRef<HTMLTextAreaElement>(null);
 
   useEffect(() => {
     getCategories()
-      .then((categories) => {
-        const names = categories.map((c) => c.level1?.name).filter((n): n is string => !!n);
-        setShortcuts([...new Set(names)]);
-      })
-      .catch(() => setShortcuts([]));
+      .then(setCategories)
+      .catch(() => setCategories([]));
   }, []);
 
   useEffect(() => {
@@ -47,11 +48,14 @@ export default function App() {
   const lastBotId = turns.at(-1)?.id ?? null;
   const selectedTurn: Turn | null = turns.find((t) => t.id === selectedId)?.turn ?? turns.at(-1)?.turn ?? null;
 
-  async function send(text: string, retry = false) {
+  /** `shortcut`: el usuario ha pulsado un atajo; se muestra `text` pero se envía su ruta. */
+  async function send(text: string, retry = false, shortcut?: Shortcut) {
     if (busy || closed) {
       return;
     }
-    const wire = retry ? lastSent! : needsContext ? composeRoutingMessage(routingMessages, text) : text;
+    const message = shortcut?.wire ?? text;
+    const wire = retry ? lastSent! : needsContext ? composeRoutingMessage(routingMessages, message) : message;
+    const turnLocation = retry ? location : (shortcut?.location ?? null);
 
     if (!retry) {
       setItems((prev) => [...prev, { id: nextId++, kind: 'user', text }]);
@@ -63,7 +67,7 @@ export default function App() {
 
     try {
       const response = await sendMessage(conversationId, wire);
-      const reply = buildBotReply(response, redirects);
+      const reply = buildBotReply(response, redirects, { categories, location: turnLocation });
       const turn: Turn = {
         sent: wire,
         response,
@@ -78,6 +82,7 @@ export default function App() {
         setRoutingMessages(needsContext || retry ? [wire] : [...routingMessages, wire]);
       }
       setNeedsContext(response.outcome === 'Fallback');
+      setLocation(response.outcome === 'Fallback' ? null : turnLocation);
       if (reply.fallbackAction === 'reconduct') {
         setRedirects((r) => r + 1);
       }
@@ -111,6 +116,7 @@ export default function App() {
     setRoutingMessages([]);
     setNeedsContext(false);
     setLastSent(null);
+    setLocation(null);
     inputRef.current?.focus();
   }
 
@@ -134,6 +140,13 @@ export default function App() {
         <div className="messages" ref={listRef}>
           <div className="bubble bot welcome">
             <p>{WELCOME}</p>
+            {items.length === 0 && (
+              <Shortcuts
+                shortcuts={level1Shortcuts(categories)}
+                disabled={busy}
+                onShortcut={(s) => void send(s.label, false, s)}
+              />
+            )}
           </div>
           {items.map((item) => {
             switch (item.kind) {
@@ -157,9 +170,8 @@ export default function App() {
                     selected={item.turn === selectedTurn}
                     isLast={item.id === lastBotId && !closed}
                     busy={busy}
-                    shortcuts={shortcuts}
                     onSelect={() => setSelectedId(item.id)}
-                    onShortcut={(s) => void send(s)}
+                    onShortcut={(s) => void send(s.label, false, s)}
                     onRetry={() => void send('', true)}
                   />
                 );

@@ -1,18 +1,19 @@
+import type { Shortcut } from '../shortcuts';
 import type { Turn } from '../types';
 import { OutcomeBadge } from './OutcomeBadge';
+import { Shortcuts } from './Shortcuts';
 
 interface Props {
   turn: Turn;
   selected: boolean;
   isLast: boolean;
   busy: boolean;
-  shortcuts: string[];
   onSelect: () => void;
-  onShortcut: (text: string) => void;
+  onShortcut: (shortcut: Shortcut) => void;
   onRetry: () => void;
 }
 
-export function BotMessage({ turn, selected, isLast, busy, shortcuts, onSelect, onShortcut, onRetry }: Props) {
+export function BotMessage({ turn, selected, isLast, busy, onSelect, onShortcut, onRetry }: Props) {
   const { reply, response } = turn;
   // Los botones solo tienen sentido en el último mensaje del bot.
   const actionsEnabled = isLast && !busy;
@@ -25,12 +26,6 @@ export function BotMessage({ turn, selected, isLast, busy, shortcuts, onSelect, 
         <span className="elapsed">{(turn.elapsedMs / 1000).toFixed(1)} s</span>
       </div>
       <p>{reply.text}</p>
-
-      {response.explanation && (
-        <p className="explanation" title="Explicación del modelo">
-          {response.explanation}
-        </p>
-      )}
 
       {reply.link && (
         <div className="form-link">
@@ -45,23 +40,7 @@ export function BotMessage({ turn, selected, isLast, busy, shortcuts, onSelect, 
         </div>
       )}
 
-      {reply.showShortcuts && shortcuts.length > 0 && (
-        <div className="shortcuts">
-          {shortcuts.map((s) => (
-            <button
-              key={s}
-              type="button"
-              disabled={!actionsEnabled}
-              onClick={(e) => {
-                e.stopPropagation();
-                onShortcut(s);
-              }}
-            >
-              {s}
-            </button>
-          ))}
-        </div>
-      )}
+      <Shortcuts shortcuts={reply.shortcuts} disabled={!actionsEnabled} onShortcut={onShortcut} />
 
       {reply.showRetry && (
         <div className="shortcuts">
@@ -77,6 +56,12 @@ export function BotMessage({ turn, selected, isLast, busy, shortcuts, onSelect, 
             Reintentar
           </button>
         </div>
+      )}
+
+      {response.explanation && (
+        <p className="explanation" title="Explicación del modelo">
+          {response.explanation}
+        </p>
       )}
     </div>
   );
