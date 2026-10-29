@@ -35,7 +35,7 @@ public static class RoutingResponseSchema
         {
             ["type"] = "object",
             ["additionalProperties"] = false,
-            ["required"] = new JsonArray("decision", "categoryId", "confidence", "extractedParameters", "followUpQuestion"),
+            ["required"] = new JsonArray("decision", "categoryId", "confidence", "extractedParameters", "followUpQuestion", "explanation"),
             ["properties"] = new JsonObject
             {
                 ["decision"] = new JsonObject
@@ -68,7 +68,12 @@ public static class RoutingResponseSchema
                         }
                     }
                 },
-                ["followUpQuestion"] = new JsonObject { ["type"] = new JsonArray("string", "null") }
+                ["followUpQuestion"] = new JsonObject { ["type"] = new JsonArray("string", "null") },
+                ["explanation"] = new JsonObject
+                {
+                    ["type"] = "string",
+                    ["description"] = "Explicación breve de por qué se ha tomado la decisión"
+                }
             }
         };
     }
@@ -99,7 +104,8 @@ public static class RoutingResponseSchema
             CategoryId = dto.CategoryId,
             Confidence = Math.Clamp(dto.Confidence ?? 0, 0, 1),
             ExtractedParameters = parameters,
-            FollowUpQuestion = dto.FollowUpQuestion
+            FollowUpQuestion = dto.FollowUpQuestion,
+            Explanation = dto.Explanation ?? string.Empty
         };
     }
 
@@ -108,7 +114,8 @@ public static class RoutingResponseSchema
         string? CategoryId,
         double? Confidence,
         List<ParameterDto>? ExtractedParameters,
-        string? FollowUpQuestion);
+        string? FollowUpQuestion,
+        string? Explanation);
 
     private sealed record ParameterDto(string? Name, string? Value);
 }

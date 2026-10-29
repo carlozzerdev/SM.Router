@@ -198,6 +198,23 @@ button:disabled {
   background: var(--fallback);
 }
 
+.bubble p.explanation {
+  margin-top: 8px;
+  padding: 6px 8px;
+  border-left: 3px solid var(--accent);
+  background: var(--surface);
+  border-radius: 4px;
+  font-size: 0.85rem;
+  font-style: italic;
+  color: var(--muted);
+}
+
+.bubble p.explanation::before {
+  content: 'Modelo: ';
+  font-style: normal;
+  font-weight: 600;
+}
+
 .form-link {
   margin-top: 8px;
   padding: 8px;

@@ -55,15 +55,27 @@ public sealed class RoutingService(
 
         if (categories.Count == 0)
         {
-            return await FallbackAsync(conversation, FallbackReason.NoCategoriesAvailable, cancellationToken);
+            return await FallbackAsync(conversation, null, FallbackReason.NoCategoriesAvailable, cancellationToken);
         }
 
         var response = await CallAiAsync(conversation, prompt, categories, cancellationToken);
         if (response is null)
         {
-            return await FallbackAsync(conversation, FallbackReason.AiError, cancellationToken);
+            return await FallbackAsync(conversation, null, FallbackReason.AiError, cancellationToken);
         }
 
+        // La explicación del modelo acompaña a cualquier resultado que salga de su respuesta
+        // (también al fallback por NoMatch, confianza baja, etc.).
+        var result = await ApplyDecisionAsync(conversation, categories, response, cancellationToken);
+        return result with { Explanation = string.IsNullOrWhiteSpace(response.Explanation) ? null : response.Explanation.Trim() };
+    }
+
+    private async Task<RoutingResult> ApplyDecisionAsync(
+        Conversation conversation,
+        IReadOnlyList<Category> categories,
+        AiRoutingResponse response,
+        CancellationToken cancellationToken)
+    {
         var category = string.IsNullOrWhiteSpace(response.CategoryId)
             ? null
             : categories.FirstOrDefault(c => string.Equals(c.Id, response.CategoryId.Trim(), StringComparison.OrdinalIgnoreCase));
@@ -71,16 +83,16 @@ public sealed class RoutingService(
         switch (response.Decision)
         {
             case AiDecision.NoMatch:
-                return await FallbackAsync(conversation, FallbackReason.NoMatch, cancellationToken);
+                return await FallbackAsync(conversation, response.FollowUpQuestion, FallbackReason.NoMatch, cancellationToken);
 
             case AiDecision.CategorySelected when category is null:
                 logger.LogWarning("El modelo devolvió una categoría desconocida: {CategoryId}", response.CategoryId);
-                return await FallbackAsync(conversation, FallbackReason.UnknownCategory, cancellationToken);
+                return await FallbackAsync(conversation, response.FollowUpQuestion, FallbackReason.UnknownCategory, cancellationToken);
 
             case AiDecision.CategorySelected when response.Confidence < _options.MinConfidence:
                 logger.LogInformation("Confianza {Confidence} inferior al mínimo {Min} para {CategoryId}",
                     response.Confidence, _options.MinConfidence, category.Id);
-                return await FallbackAsync(conversation, FallbackReason.LowConfidence, cancellationToken);
+                return await FallbackAsync(conversation, response.FollowUpQuestion,     FallbackReason.LowConfidence, cancellationToken);
 
             case AiDecision.CategorySelected:
                 return await ResolveCategoryAsync(conversation, category, response, modelWantsMoreInfo: false, cancellationToken);
@@ -94,7 +106,7 @@ public sealed class RoutingService(
 
             default:
                 logger.LogWarning("Decisión del modelo no soportada: {Decision}", response.Decision);
-                return await FallbackAsync(conversation, FallbackReason.AiError, cancellationToken);
+                return await FallbackAsync(conversation, response.FollowUpQuestion , FallbackReason.AiError, cancellationToken);
         }
     }
 
@@ -142,7 +154,7 @@ public sealed class RoutingService(
     {
         if (conversation.ClarificationTurns >= _options.MaxClarificationTurns)
         {
-            return await FallbackAsync(conversation, FallbackReason.MaxClarificationsReached, cancellationToken);
+            return await FallbackAsync(conversation, modelQuestion, FallbackReason.MaxClarificationsReached, cancellationToken);
         }
 
         var question = ClarificationQuestionBuilder.Build(missing, rejected, modelQuestion, _options.DefaultFollowUpQuestion);
@@ -162,6 +174,7 @@ public sealed class RoutingService(
 
     private async Task<RoutingResult> FallbackAsync(
         Conversation conversation,
+        string? question,
         FallbackReason reason,
         CancellationToken cancellationToken)
     {
@@ -176,7 +189,8 @@ public sealed class RoutingService(
             ConversationId = conversation.Id,
             Outcome = RoutingOutcome.Fallback,
             Category = fallback,
-            FallbackReason = reason
+            FallbackReason = reason,
+            Question = question
         };
     }
 

@@ -25,4 +25,7 @@ public sealed record AiRoutingResponse
 
     /// <summary>Pregunta propuesta por el modelo para pedir la información que falta.</summary>
     public string? FollowUpQuestion { get; init; }
+
+    /// <summary>Explicación del modelo de por qué ha tomado la decisión.</summary>
+    public string Explanation { get; init; } = string.Empty;
 }

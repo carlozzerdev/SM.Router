@@ -26,6 +26,12 @@ export function BotMessage({ turn, selected, isLast, busy, shortcuts, onSelect, 
       </div>
       <p>{reply.text}</p>
 
+      {response.explanation && (
+        <p className="explanation" title="Explicación del modelo">
+          {response.explanation}
+        </p>
+      )}
+
       {reply.link && (
         <div className="form-link">
           {reply.link.href ? (

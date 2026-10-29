@@ -20,4 +20,7 @@ public sealed record RoutingResult
     public string? Question { get; init; }
 
     public FallbackReason? FallbackReason { get; init; }
+
+    /// <summary>Explicación del modelo sobre su decisión. Null si la IA no ha respondido (error, sin categorías).</summary>
+    public string? Explanation { get; init; }
 }

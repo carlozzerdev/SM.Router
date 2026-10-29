@@ -41,12 +41,14 @@ public sealed class OpenAIClientTests
               "categoryId": "incidencia_tecnica",
               "confidence": 0.92,
               "extractedParameters": [ { "name": "producto", "value": "Outlook" }, { "name": "prioridad", "value": null }, { "name": " ", "value": "x" } ],
-              "followUpQuestion": null
+              "followUpQuestion": null,
+              "explanation": "El usuario indica que Outlook falla."
             }
             """));
 
         var result = await CreateSut().RouteAsync(Request(), Ct);
 
+        Assert.Equal("El usuario indica que Outlook falla.", result.Explanation);
         Assert.Equal(AiDecision.CategorySelected, result.Decision);
         Assert.Equal("incidencia_tecnica", result.CategoryId);
         Assert.Equal(0.92, result.Confidence);

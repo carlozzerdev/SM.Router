@@ -258,6 +258,54 @@ public sealed class RoutingServiceTests
 
         Assert.Equal(RoutingOutcome.Fallback, result.Outcome);
         Assert.Equal(FallbackReason.AiError, result.FallbackReason);
+        Assert.Null(result.Explanation);
+    }
+
+    // ---------- Explicación del modelo ----------
+
+    [Fact]
+    public async Task PropagatesModelExplanation_WhenRouted()
+    {
+        AiReturns(Ai.Selected("saludo") with { Explanation = "  El usuario solo saluda.  " });
+
+        var result = await CreateSut().ProcessMessageAsync(null, "Hola", Ct);
+
+        Assert.Equal(RoutingOutcome.Routed, result.Outcome);
+        Assert.Equal("El usuario solo saluda.", result.Explanation);
+    }
+
+    [Fact]
+    public async Task PropagatesModelExplanation_WhenAskingForInformation()
+    {
+        AiReturns(Ai.NeedsInfo("incidencia_tecnica") with { Explanation = "Falta el producto." });
+
+        var result = await CreateSut().ProcessMessageAsync(null, "Tengo un problema", Ct);
+
+        Assert.Equal(RoutingOutcome.NeedsMoreInformation, result.Outcome);
+        Assert.Equal("Falta el producto.", result.Explanation);
+    }
+
+    [Fact]
+    public async Task PropagatesModelExplanation_WhenFallingBackOnModelDecision()
+    {
+        AiReturns(Ai.NoMatch() with { Explanation = "No es una consulta de SM." });
+
+        var result = await CreateSut().ProcessMessageAsync(null, "¿Qué tiempo hace?", Ct);
+
+        Assert.Equal(FallbackReason.NoMatch, result.FallbackReason);
+        Assert.Equal("No es una consulta de SM.", result.Explanation);
+    }
+
+    [Theory]
+    [InlineData("")]
+    [InlineData("   ")]
+    public async Task ExplanationIsNull_WhenModelReturnsBlank(string explanation)
+    {
+        AiReturns(Ai.Selected("saludo") with { Explanation = explanation });
+
+        var result = await CreateSut().ProcessMessageAsync(null, "Hola", Ct);
+
+        Assert.Null(result.Explanation);
     }
 
     [Fact]

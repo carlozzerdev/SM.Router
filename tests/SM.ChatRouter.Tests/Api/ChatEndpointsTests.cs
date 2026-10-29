@@ -62,7 +62,7 @@ public sealed class ChatEndpointsTests : IClassFixture<WebApplicationFactory<Pro
             Ai.NeedsInfo(id, "¿Cuál es tu email?",
                 ("nombre-comercial-o-razon-social", "Librería Pérez"), ("nombre", "Ana"), ("apellidos", "Pérez"),
                 ("descripcion-de-la-solicitud", "Quiero que me visite un comercial")),
-            Ai.Selected(id, 0.9, ("email", "ana@example.com"))));
+            Ai.Selected(id, 0.9, ("email", "ana@example.com")) with { Explanation = "Ya están todos los datos obligatorios." }));
 
         var first = await PostAsync(client, null, "Soy Ana Pérez de Librería Pérez y quiero que me visite un comercial");
         var second = await PostAsync(client, first.ConversationId, "ana@example.com");
@@ -76,6 +76,8 @@ public sealed class ChatEndpointsTests : IClassFixture<WebApplicationFactory<Pro
         Assert.Equal("Soporte para librerías o centros escolares > Atención Comercial > Solicitar la visitar de un asesor comercial", second.Category.Path);
         Assert.Equal("ana@example.com", second.Parameters["email"]);
         Assert.Equal("Ana", second.Parameters["nombre"]);
+        Assert.Null(first.Explanation);
+        Assert.Equal("Ya están todos los datos obligatorios.", second.Explanation);
     }
 
     [Fact]

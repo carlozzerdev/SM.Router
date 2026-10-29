@@ -26,6 +26,8 @@ export interface ChatResponse {
   parameters: Record<string, string>;
   missingParameters: string[];
   fallbackReason: FallbackReason | null;
+  /** Explicación del modelo sobre su decisión. Opcional: no llega si la IA no ha respondido. */
+  explanation?: string | null;
 }
 
 export interface CategoryNode {

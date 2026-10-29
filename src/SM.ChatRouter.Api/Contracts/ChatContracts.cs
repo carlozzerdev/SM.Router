@@ -15,7 +15,8 @@ public sealed record ChatResponse(
     CategorySummary? Category,
     IReadOnlyDictionary<string, string> Parameters,
     IReadOnlyList<string> MissingParameters,
-    FallbackReason? FallbackReason)
+    FallbackReason? FallbackReason,
+    string? Explanation)
 {
     public static ChatResponse From(RoutingResult result) => new(
         result.ConversationId,
@@ -24,5 +25,6 @@ public sealed record ChatResponse(
         result.Category is null ? null : new CategorySummary(result.Category.Id, result.Category.Name, result.Category.FullName),
         result.Parameters,
         result.MissingParameters,
-        result.FallbackReason);
+        result.FallbackReason,
+        result.Explanation);
 }

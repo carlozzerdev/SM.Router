@@ -36,6 +36,9 @@ export function Diagnostics({ turn, maxRedirects }: { turn: Turn | null; maxRedi
           )}
         </dd>
 
+        <dt>Explicación</dt>
+        <dd>{response.explanation || <span className="muted">—</span>}</dd>
+
         {response.question && (
           <>
             <dt>Pregunta</dt>
